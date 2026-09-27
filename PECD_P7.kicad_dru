@@ -1,0 +1,354 @@
+(version 1)
+
+# =========================================================================
+#  Regole di progetto - Inverter di trazione trifase 2L, Project 7
+#
+#  Copiare questo file nella cartella del progetto KiCad con il nome
+#  <nome_progetto>.kicad_dru: KiCad lo carica da solo all'apertura del PCB.
+#
+#  Revisione 4: rinforzata e telaio 9.0 -> 9.5 mm (margine su un requisito
+#  PD2 che a 900 V vale esattamente 9.00 mm); eccezione ZONA_ISOLATORE per le
+#  file di piedini degli isolatori; cava passante sotto ogni isolatore, nei
+#  footprint PECD_P7:SOIC-16W_TI_DW_HV_Slot e SOIC-8W_TI_DWV_Slot. 28 regole.
+#
+#  Revisione 3: tensione di lavoro 900 V (V_max,cont, requisito R12 del
+#  report) al posto di 800 V. Funzionale 4.0 -> 4.5 mm, rinforzata e telaio
+#  8.0 -> 9.0 mm, arretramento dal bordo 2.0 -> 2.25 mm.
+#
+#  Revisione 2: le distanze non sono piu' valori di buon senso ma il
+#  risultato del coordinamento dell'isolamento di `isolamento.md`. Le
+#  novita' rispetto alla revisione 1:
+#    - il keepout sotto i componenti isolanti ora vieta anche le ZONE
+#      (prima passavano: non sono ne' piste ne' fori)
+#    - arretramento dal bordo scheda, che prima mancava del tutto
+#    - larghezze minime dei conduttori, come avvisi
+#    - ogni distanza e' annotata con il requisito da cui deriva
+#
+#  ---------------------------------------------------------------------
+#  LA CONDIZIONE CHE TIENE IN PIEDI TUTTO IL FILE
+#
+#  Le distanze qui sotto valgono in GRADO DI INQUINAMENTO 1, ottenuto con
+#  RIVESTIMENTO CONFORME su entrambe le facce della zona HV. Senza
+#  rivestimento il requisito funzionale a 900 V sale da 2,80 a 9,00 mm
+#  (FR-4 material group IIIa) e il package del TO-247-4L ne offre 3,24:
+#  il progetto non sarebbe realizzabile. Il rivestimento e' un elemento
+#  di progetto, non una finitura.
+#  ---------------------------------------------------------------------
+#  SECONDA CONDIZIONE: LA TENSIONE DI TENUTA A IMPULSO
+#
+#  Il creepage non puo' essere minore del clearance, e il clearance dipende
+#  dall'impulso nominale assunto. Questo progetto dichiara 2.5 kV, ricavato
+#  dal transitorio interno simulato (1148 V al die nel caso peggiore, 50 nH)
+#  e NON da una
+#  categoria di sovratensione di rete, che a una batteria non si applica.
+#
+#     impulso    clearance    creepage PD1 risultante    3.24 mm disponibili
+#     1.5 kV      0.50 mm           2.80 mm                    +16 %
+#     2.5 kV      1.50 mm           2.80 mm                    +16 %  <- qui
+#     4   kV      3.00 mm           3.00 mm                    + 8 %
+#     6   kV      5.50 mm           5.50 mm                    -41 %  FALLISCE
+#
+#  Assumere la categoria II su una banda da 1000 V, che e' l'istinto di chi
+#  lavora su apparecchi da rete, darebbe 6 kV e farebbe cadere il progetto.
+#  ---------------------------------------------------------------------
+#
+#  QUOTE CHE IL DRC NON PUO' VERIFICARE, perche' riguardano oggetti che non
+#  stanno nel file PCB. Vanno sul disegno meccanico:
+#    - pad isolante ceramico >= 33 x 37 x 0.63 mm, CTI >= 600 dichiarato
+#      (sporgenza >= 8.4 mm per lato oltre la linguetta del TO-247, che e'
+#      il drain a 900 V verso un coldplate a telaio). Dimensionato in PD2:
+#      il pad e' fuori dalla scheda e NON e' rivestito.
+#    - fissaggio a CLIP sul corpo del package. Con una vite passante serve
+#      una boccola isolante a spallamento, altrimenti la vite cortocircuita
+#      la barriera che il pad costruisce.
+#    - >= 5.0 mm in aria fra qualunque rame HV e coldplate, viti, rondelle,
+#      distanziali, pareti della carpenteria
+#  ---------------------------------------------------------------------
+#
+#  CLASSI DI NET da creare in Board Setup > Net Classes. Le larghezze
+#  vengono dalla forma chiusa IPC-2221B a DeltaT = 30 K, rame 2 oz
+#  esterno (tab. 10.1 del report):
+#
+#    Classe        Net                              Larghezza  Via
+#    HV_BUS        HV_DCP, HV_DCN                    10.4 mm   0.8/0.4 x4
+#    HV_POWER      HV_SW*, HV_PH*                     8.4 mm   0.8/0.4 x4
+#    GATE_FLOAT    G*_GATE, G*_COM, G*_VDD, G*_VEE    0.5 mm   0.6/0.3
+#    SENSE_FLOAT   SNS*_*                             0.3 mm   0.6/0.3
+#    CTRL          CTL_*                              0.3 mm   0.6/0.3
+#    PWR_LV        +12V_PRI, +5V, +3V3, GND           1.0 mm   0.6/0.3
+#    CHASSIS       CHASSIS                            2.0 mm   0.8/0.4
+#
+#  A queste correnti si usa comunque una colata di rame e non una pista:
+#  la larghezza calcolata serve da verifica, non da istruzione di
+#  instradamento.
+# =========================================================================
+
+
+# -------------------------------------------------------------------------
+#  BARRIERA 1 - isolamento FUNZIONALE fra nodi in alta tensione
+# -------------------------------------------------------------------------
+# Requisito IEC 60664-1 tab. F.4 a 900 V di tensione di lavoro:
+#     PD1 (rivestito)                 2.80 mm   <- il caso di progetto
+#     PD2 gruppo I    (CTI >= 600)    4.50 mm
+#     PD2 gruppo IIIa (FR-4 comune)   9.00 mm
+# Si adottano 4.5 mm, non 2.80: e' il requisito di PD2 con il laminato
+# gruppo I richiesto sul disegno, cioe' il valore che vale SE IL
+# RIVESTIMENTO HA UN VUOTO. Il PCB ha spazio e la separazione laterale non
+# costa induttanza (la maglia si chiude in verticale), quindi la robustezza
+# si compra gratis.
+#
+# ECCEZIONE: le piazzole del TO-247-4L distano 3.24 mm fra drain e source
+# (1.84 mm di larghezza su passo 5.08) e non si possono allargare: e'
+# geometria del componente. Per quelle si disegna un'area di regola chiamata
+# ZONA_PACKAGE sopra la fila di piazzole di ciascun MOSFET, e la regola la
+# esclude. Si preferisce l'eccezione esplicita all'abbassare la soglia per
+# tutti, perche' una regola che fallisce sempre e' una regola che qualcuno
+# disattiva.
+#
+# Il clearance in aria non e' il vincolo a 2.5 kV di impulso: servono
+# 1.50 mm contro 3.24 disponibili, 2.2x. E' il cammino sulla superficie che
+# decide, ed e' per questo che il rivestimento risolve. Ma il clearance non
+# e' piu' trascurabile come si era scritto: a 4 kV diventerebbe lui a fissare
+# il creepage.
+
+(rule "HV funzionale: fra domini HV diversi"
+  (constraint clearance (min 4.5mm))
+  (condition "A.NetClass == 'HV_BUS' && B.NetClass == 'HV_POWER' && !A.insideArea('ZONA_PACKAGE')"))
+
+(rule "HV funzionale: dentro HV_POWER fra fasi diverse"
+  (constraint clearance (min 4.5mm))
+  (condition "A.NetClass == 'HV_POWER' && B.NetClass == 'HV_POWER' && A.NetName != B.NetName && !A.insideArea('ZONA_PACKAGE')"))
+
+(rule "HV funzionale: dentro HV_BUS"
+  (constraint clearance (min 4.5mm))
+  (condition "A.NetClass == 'HV_BUS' && B.NetClass == 'HV_BUS' && A.NetName != B.NetName && !A.insideArea('ZONA_PACKAGE')"))
+
+# Dentro ZONA_PACKAGE vale il minimo fisico del package: 3.24 mm fra drain e
+# source, che passa in PD1 (2.80 richiesti) e NON passa in PD2 (4.50). E'
+# l'unico punto della scheda che dipende davvero dal rivestimento.
+(rule "HV funzionale: dentro l'area del package"
+  (constraint clearance (min 3.2mm))
+  (condition "A.insideArea('ZONA_PACKAGE') && B.insideArea('ZONA_PACKAGE')"))
+
+
+# -------------------------------------------------------------------------
+#  BARRIERA 2 - isolamento RINFORZATO fra alta tensione e controllo
+# -------------------------------------------------------------------------
+# Requisito IEC 60664-1: il rinforzato e' il DOPPIO del base.
+#     PD1 (rivestito)                 5.60 mm   <- il caso di progetto
+#     PD2 gruppo I                    9.00 mm
+#     PD2 gruppo IIIa                18.00 mm
+# Si adottano 9.5 mm sul rame della scheda: +70 % sul requisito in PD1 e
+# +6 % su quello di PD2 con laminato gruppo I (9.00 mm, interpolato fra le
+# righe 800 e 1000 V): la barriera regge un vuoto del rivestimento, con un
+# margine per le tolleranze di fabbricazione. Con 9.0 il margine era zero.
+#
+# SOTTO GLI ISOLATORI (report, "The slot that is made"):
+#   - i driver usano il land pattern HV del costruttore: 8.1 mm fra le file
+#     di piazzole. Il footprint IPC standard ne lasciava 7.3.
+#   - cava passante 1.5 mm sotto ogni isolatore, gia' disegnata nel footprint
+#     su Edge.Cuts: il cammino sulla scheda gira intorno alla cava, >= 9.8 mm.
+#   - resta il cammino sulla superficie del package, 8.0 mm (UCC21750) e
+#     8.5 mm (AMC1302/1311) [DS]: proprieta' del componente certificato, in
+#     PD2 sotto i 9.00 mm, coperta dal rivestimento nel caso di progetto.
+#   - le file di piazzole di un isolatore stanno in un'area ZONA_ISOLATORE,
+#     disegnata stretta sul footprint: li' vale la regola dedicata piu' sotto.
+#
+# CONVERTITORI ISOLATI (MGJ2): come barriera di sicurezza sono riconosciuti
+# rinforzati solo fino a 150 Vrms [DS]. A 900 V sono isolamento funzionale.
+# Questo file non lo puo' correggere: e' una decisione aperta (report A.25).
+#
+# ATTENZIONE: anche questa barriera dipende dal rivestimento. La revisione
+# 1 la dava per "garantita dai componenti", che e' vero per il componente e
+# falso per il rame che gli sta intorno.
+#
+# Vale anche per i domini FLOTTANTI: il riferimento di gate del lato alto
+# si muove fra 0 e 900 V rispetto a GND, quindi verso il controllo e' a
+# tutti gli effetti un nodo di alta tensione.
+
+(rule "Rinforzata: HV_BUS verso controllo"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'HV_BUS' && B.NetClass == 'CTRL'"))
+
+(rule "Rinforzata: HV_BUS verso alimentazioni LV"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'HV_BUS' && B.NetClass == 'PWR_LV'"))
+
+(rule "Rinforzata: HV_POWER verso controllo"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'HV_POWER' && B.NetClass == 'CTRL'"))
+
+(rule "Rinforzata: HV_POWER verso alimentazioni LV"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'HV_POWER' && B.NetClass == 'PWR_LV'"))
+
+(rule "Rinforzata: gate flottante verso controllo"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'GATE_FLOAT' && B.NetClass == 'CTRL' && !(A.insideArea('ZONA_ISOLATORE') && B.insideArea('ZONA_ISOLATORE'))"))
+
+(rule "Rinforzata: gate flottante verso alimentazioni LV"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'GATE_FLOAT' && B.NetClass == 'PWR_LV' && !(A.insideArea('ZONA_ISOLATORE') && B.insideArea('ZONA_ISOLATORE'))"))
+
+(rule "Rinforzata: sensing flottante verso controllo"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'SENSE_FLOAT' && B.NetClass == 'CTRL' && !(A.insideArea('ZONA_ISOLATORE') && B.insideArea('ZONA_ISOLATORE'))"))
+
+(rule "Rinforzata: sensing flottante verso alimentazioni LV"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'SENSE_FLOAT' && B.NetClass == 'PWR_LV' && !(A.insideArea('ZONA_ISOLATORE') && B.insideArea('ZONA_ISOLATORE'))"))
+
+# Fra le due file di piazzole dello stesso isolatore vale la geometria del
+# componente: 8.1 mm (driver, land pattern HV) e 9.1 mm (amplificatori). La
+# regola verifica che nessuno la accorci, per esempio tornando al footprint
+# IPC standard da 7.3 mm.
+(rule "Rinforzata: fra le file di piazzole di un isolatore"
+  (constraint clearance (min 8.0mm))
+  (condition "A.insideArea('ZONA_ISOLATORE') && B.insideArea('ZONA_ISOLATORE') && A.NetClass != B.NetClass"))
+
+
+# -------------------------------------------------------------------------
+#  BARRIERA 3 - alta tensione verso TELAIO
+# -------------------------------------------------------------------------
+# Il telaio e' toccabile: stessa quota della barriera rinforzata.
+#
+# [IPOTESI] Dipende dall'architettura di sicurezza del veicolo, che non e'
+# definita: se il sistema HV resta flottante e monitorato, potrebbe bastare
+# meno. 9.5 mm e' la scelta prudente finche' non c'e' una specifica.
+
+(rule "Telaio: da HV_BUS"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'CHASSIS' && B.NetClass == 'HV_BUS'"))
+
+(rule "Telaio: da HV_POWER"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'CHASSIS' && B.NetClass == 'HV_POWER'"))
+
+(rule "Telaio: da gate flottante"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'CHASSIS' && B.NetClass == 'GATE_FLOAT'"))
+
+(rule "Telaio: da sensing flottante"
+  (constraint clearance (min 9.5mm))
+  (condition "A.NetClass == 'CHASSIS' && B.NetClass == 'SENSE_FLOAT'"))
+
+
+# -------------------------------------------------------------------------
+#  Fra domini flottanti diversi
+# -------------------------------------------------------------------------
+# I sette riferimenti di gate si muovono l'uno rispetto all'altro di
+# centinaia di volt durante le commutazioni: isolamento funzionale a 900 V,
+# quindi la stessa quota della barriera 1, eccezione del package compresa
+# (qui non serve: nessun dominio flottante passa sotto un TO-247).
+
+(rule "Fra gate flottanti di domini diversi"
+  (constraint clearance (min 4.5mm))
+  (condition "A.NetClass == 'GATE_FLOAT' && B.NetClass == 'GATE_FLOAT' && A.NetName != B.NetName"))
+
+(rule "Fra sensing flottanti di domini diversi"
+  (constraint clearance (min 4.5mm))
+  (condition "A.NetClass == 'SENSE_FLOAT' && B.NetClass == 'SENSE_FLOAT' && A.NetName != B.NetName"))
+
+
+# -------------------------------------------------------------------------
+#  BORDO SCHEDA - il cammino superficiale si avvolge
+# -------------------------------------------------------------------------
+# Questa regola mancava nella revisione 1 ed e' il caso piu' facile da non
+# vedere: fra HV_DCP su L1 e HV_DCN su L2 il prepreg da 0.10 mm e'
+# isolamento SOLIDO, ma sul fianco della scheda esiste un secondo cammino,
+# superficiale, che gira intorno al bordo:
+#
+#     cammino = arretramento(L1) + spessore del dielettrico + arretramento(L2)
+#     con 2.25 mm per piano -> 2.25 + 0.1 + 2.25 = 4.60 mm
+#
+# Il bordo e' fresato in depanelizzazione e NON e' rivestito in modo
+# affidabile: si assume PD2. Col laminato gruppo I richiesto sul disegno il
+# requisito a 900 V e' 4.50 mm: i 2.0 mm della revisione 2 (4.10 mm) non
+# bastano piu', 2.25 mm passano di misura.
+#
+# Alternativa: depanelizzare PRIMA del rivestimento. Il bordo diventa PD1
+# (2.80 mm) e bastano 1.35 mm. Costa un vincolo di sequenza in produzione.
+
+(rule "Bordo scheda: arretramento dei net HV"
+  (constraint edge_clearance (min 2.25mm))
+  (condition "A.NetClass == 'HV_BUS' || A.NetClass == 'HV_POWER'"))
+
+(rule "Bordo scheda: arretramento dei domini flottanti"
+  (constraint edge_clearance (min 2.25mm))
+  (condition "A.NetClass == 'GATE_FLOAT' || A.NetClass == 'SENSE_FLOAT'"))
+
+
+# -------------------------------------------------------------------------
+#  KEEPOUT SOTTO I COMPONENTI ISOLANTI
+# -------------------------------------------------------------------------
+# Sotto il corpo di un isolatore il cammino certificato e' quello del
+# COMPONENTE, misurato dal costruttore sulla sua geometria. Il compito del
+# PCB e' non creare un cammino parallelo piu' corto.
+#
+# CORREZIONE alla revisione 1: la regola vietava solo `via track`. Una ZONA
+# di rame non e' ne' una pista ne' un foro e ci entrava: su una scheda con
+# piani su L2, L3 e L5 e' il modo piu' facile di accorciare una barriera
+# senza accorgersene.
+#
+# L'area KEEPOUT_BARRIERA va disegnata su TUTTI gli strati, larga almeno
+# quanto il creepage certificato del componente (8.0 mm), centrata sulla
+# barriera del package. La cava del footprint deve starci dentro con almeno
+# 1 mm di margine su ogni strato: cosi' non taglia nessun piano (nessun piano
+# attraversa una barriera) e non allunga nessun ritorno di gate. Il fianco
+# della cava e' un bordo fresato: la regola di arretramento dal bordo
+# (2.25 mm per i domini flottanti) vale anche li', e con 3.3 mm e' rispettata.
+
+(rule "Nessun rame sotto i componenti isolanti"
+  (constraint disallow track via zone pad hole)
+  (condition "A.insideArea('KEEPOUT_BARRIERA')"))
+
+
+# -------------------------------------------------------------------------
+#  FORI E VIA
+# -------------------------------------------------------------------------
+# Un foro passante da 1.6 mm con diametro 0.4 mm vale circa 1.2 nH: sul
+# percorso di potenza non se ne usa mai uno solo. Quattro in parallelo,
+# distanziati, valgono circa 0.39 nH contando il 30 % di penalita' da
+# accoppiamento mutuo. Il foro piu' largo e' anche piu' robusto alla
+# corrente.
+
+(rule "Fori di potenza: diametro minimo"
+  (constraint hole_size (min 0.6mm))
+  (condition "A.NetClass == 'HV_BUS' || A.NetClass == 'HV_POWER'"))
+
+(rule "Via di potenza: diametro esterno minimo"
+  (constraint via_diameter (min 0.8mm))
+  (condition "A.NetClass == 'HV_BUS' || A.NetClass == 'HV_POWER'"))
+
+(rule "Fori di potenza: anello minimo"
+  (constraint annular_width (min 0.25mm))
+  (condition "A.NetClass == 'HV_BUS' || A.NetClass == 'HV_POWER'"))
+
+# Un pettine di fori troppo fitto indebolisce il laminato e, sui net HV,
+# riduce anche il cammino superficiale fra i due lati della scheda.
+(rule "Distanza fra fori"
+  (constraint hole_to_hole (min 0.5mm)))
+
+
+# -------------------------------------------------------------------------
+#  LARGHEZZE DEI CONDUTTORI
+# -------------------------------------------------------------------------
+# Dalla forma chiusa IPC-2221B a DeltaT = 30 K, rame 2 oz su strato esterno:
+#     fase   30 A_RMS -> 8.4 mm
+#     bus    35 A     -> 10.4 mm   (32 A di bus + ripple)
+#
+# Dichiarate come AVVISO e non come errore, di proposito: il raccordo verso
+# la piazzola di un componente e' per forza piu' stretto della colata, e un
+# errore bloccante li' renderebbe il DRC inutilizzabile. L'avviso serve a
+# far guardare ogni tratto stretto e decidere se e' un raccordo corto o un
+# conduttore sottodimensionato.
+
+(rule "Larghezza minima del bus DC"
+  (constraint track_width (min 10.4mm))
+  (severity warning)
+  (condition "A.NetClass == 'HV_BUS'"))
+
+(rule "Larghezza minima delle fasi"
+  (constraint track_width (min 8.4mm))
+  (severity warning)
+  (condition "A.NetClass == 'HV_POWER'"))

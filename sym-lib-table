@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "PECD_P7") (type "KiCad") (uri "${KIPRJMOD}/PECD_P7.kicad_sym") (options "") (descr ""))
+)

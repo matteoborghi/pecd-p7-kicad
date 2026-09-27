@@ -1,0 +1,46 @@
+(footprint "TO-247-4L_Wolfspeed_Vertical"
+  (version 20221018)
+  (generator "PECD_P7_manuale")
+  (layer "F.Cu")
+  (descr "Wolfspeed TO-247-4L (4 lead, Kelvin source), vertical through-hole mount. Pad geometry from the Recommended Solder Pad Layout of the C3M0040120K datasheet Rev. 03 (Sept 2024) page 11: pad 1.84 x 3.46 mm, spacing 5.08 / 2.54 / 2.54 mm. Slot widened from the datasheet 1.33 to 1.45 mm for hand assembly; copper-to-copper distances are unchanged, only the annular ring goes from 0.255 to 0.195 mm. Body outline from the Package Outline Drawing page 10 (E = 15.75-16.13, D1 = 16.25-17.65). Pin 1 = Drain, 2 = Source (power), 3 = Driver Source (Kelvin), 4 = Gate. Verified identical on the E3M0016120K datasheet Rev. 3 (March 2025) page 11 (pads) and page 10 (body). The tab is Drain and is bolted to the coldplate, not to the PCB: no mounting hole is provided here.")
+  (tags "TO-247 TO-247-4 TO-247-4L SiC MOSFET Kelvin Wolfspeed")
+  (attr through_hole)
+
+  (fp_text reference "Q**" (at 5.08 2.8) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text value "E3M0016120K" (at 5.08 -21.5) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+
+  (fp_line (start -2.87 -2) (end 13.03 -2) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start -2.87 -18.95) (end 13.03 -18.95) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start -2.87 -2) (end -2.87 -18.95) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+  (fp_line (start 13.03 -2) (end 13.03 -18.95) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start -2.2 -2.6) (end -1.4 -2.6) (stroke (width 0.3) (type solid)) (layer "F.SilkS"))
+  (fp_line (start -1.8 -3) (end -1.8 -2.2) (stroke (width 0.3) (type solid)) (layer "F.SilkS"))
+
+  (fp_line (start -2.87 -2) (end 13.03 -2) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start -2.87 -18.95) (end 13.03 -18.95) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start -2.87 -2) (end -2.87 -18.95) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start 13.03 -2) (end 13.03 -18.95) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start -2.87 -18.95) (end -2.87 -25.5) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start 13.03 -18.95) (end 13.03 -25.5) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_line (start -2.87 -25.5) (end 13.03 -25.5) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+  (fp_circle (center 5.08 -22.3) (end 6.87 -22.3)
+    (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab"))
+
+  (fp_line (start -3.62 -19.7) (end 13.78 -19.7) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start -3.62 1.5) (end 13.78 1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start -3.62 -19.7) (end -3.62 1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+  (fp_line (start 13.78 -19.7) (end 13.78 1.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+
+  (pad "1" thru_hole oval (at 0 0) (size 1.84 3.46) (drill oval 1.45 2.01)
+    (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+  (pad "2" thru_hole oval (at 5.08 0) (size 1.84 3.46) (drill oval 1.45 2.01)
+    (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+  (pad "3" thru_hole oval (at 7.62 0) (size 1.84 3.46) (drill oval 1.45 2.01)
+    (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+  (pad "4" thru_hole oval (at 10.16 0) (size 1.84 3.46) (drill oval 1.45 2.01)
+    (layers "*.Cu" "*.Mask") (remove_unused_layers no))
+
+)

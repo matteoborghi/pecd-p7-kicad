@@ -1,0 +1,308 @@
+(kicad_symbol_lib
+  (version 20220914)
+  (generator "PECD_P7_manuale")
+
+  ;; =====================================================================
+  ;;  E3M0016120K - SiC MOSFET 1200 V / 16 mOhm, TO-247-4L, automotive (AEC-Q101)
+  ;;  Stessa piedinatura di tutta la famiglia Wolfspeed TO-247-4L: per il
+  ;;  MOSFET di scarica (E3M0040120K) si usa lo stesso simbolo e si cambia Value.
+  ;;  Pin 1 Drain, 2 Source di potenza, 3 Source di Kelvin, 4 Gate.
+  ;;  Il terzo pin e' l'intera ragione della scelta del package: separa il
+  ;;  ritorno del driver dal percorso di potenza (doc. ausiliari 1, §8.5).
+  ;; =====================================================================
+  (symbol "E3M0016120K"
+    (pin_names (offset 0.254) hide)
+    (in_bom yes) (on_board yes)
+    (property "Reference" "Q" (at 5.08 2.54 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "E3M0016120K" (at 5.08 0 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "PECD_P7:TO-247-4L_Wolfspeed_Vertical" (at 5.08 -2.54 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (property "Datasheet" "Wolfspeed E3M0016120K Rev. 3, 03-2025" (at 5.08 -5.08 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide))
+    (property "Description" "SiC MOSFET 1200 V 16 mOhm, TO-247-4L con source di Kelvin"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+
+    (symbol "E3M0016120K_0_1"
+      ;; barra di gate
+      (polyline (pts (xy -5.08 2.54) (xy -5.08 -2.54))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; canale a tre segmenti (enhancement mode)
+      (polyline (pts (xy -3.81 2.54) (xy -3.81 1.27))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy -3.81 0.635) (xy -3.81 -0.635))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy -3.81 -1.27) (xy -3.81 -2.54))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; drain
+      (polyline (pts (xy -3.81 1.905) (xy 0 1.905) (xy 0 5.08))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; source di potenza
+      (polyline (pts (xy -3.81 -1.905) (xy 0 -1.905) (xy 0 -5.08))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; bulk verso source
+      (polyline (pts (xy -3.81 0) (xy 0 0) (xy 0 -1.905))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; freccia di bulk (canale N)
+      (polyline (pts (xy -1.27 -0.635) (xy -1.27 0.635) (xy -2.54 0))
+        (stroke (width 0.254) (type default)) (fill (type outline)))
+      ;; diodo di corpo: e' il componente di libera circolazione reale,
+      ;; non c'e' Schottky esterno (doc. ausiliari 1, §1.2)
+      (polyline (pts (xy 2.54 1.905) (xy 2.54 -1.905))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 1.905) (xy 2.54 1.905))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 -1.905) (xy 2.54 -1.905))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy 1.778 0.762) (xy 3.302 0.762) (xy 2.54 -0.508) (xy 1.778 0.762))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy 1.778 -0.508) (xy 3.302 -0.508))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      ;; ramo del source di Kelvin
+      (polyline (pts (xy -3.81 -2.286) (xy -6.35 -2.286) (xy -6.35 -5.08))
+        (stroke (width 0.254) (type default)) (fill (type none)))
+    )
+    (symbol "E3M0016120K_1_1"
+      (pin input line (at -7.62 0 0) (length 2.54)
+        (name "G" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 0 7.62 270) (length 2.54)
+        (name "D" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 0 -7.62 90) (length 2.54)
+        (name "S" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -6.35 -7.62 90) (length 2.54)
+        (name "S_K" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27)))))
+    )
+  )
+
+  ;; =====================================================================
+  ;;  UCC21750DW - gate driver isolato rinforzato, DESAT, Miller clamp
+  ;;  Lato primario a sinistra, secondario a destra, barriera al centro.
+  ;; =====================================================================
+  (symbol "UCC21750DW"
+    (pin_names (offset 0.254))
+    (in_bom yes) (on_board yes)
+    (property "Reference" "U" (at -12.7 21.59 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "UCC21750DW" (at 2.54 21.59 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" (at 0 -24.13 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "TI SLUSD78C, 01-2023" (at 0 -26.67 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Gate driver isolato 10 A con DESAT, Miller clamp attivo e soft shutdown"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+
+    (symbol "UCC21750DW_0_1"
+      (rectangle (start -12.7 20.32) (end 12.7 -20.32)
+        (stroke (width 0.254) (type default)) (fill (type background)))
+      ;; barriera di isolamento rinforzato (2121 V DC, DIN EN IEC 60747-17)
+      (polyline (pts (xy 0 20.32) (xy 0 -20.32))
+        (stroke (width 0.254) (type dash)) (fill (type none)))
+    )
+    (symbol "UCC21750DW_1_1"
+      ;; --- lato primario (riferito a GND) ---
+      (pin power_in line (at -15.24 17.78 0) (length 2.54)
+        (name "VCC" (effects (font (size 1.27 1.27))))
+        (number "15" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -15.24 12.7 0) (length 2.54)
+        (name "IN+" (effects (font (size 1.27 1.27))))
+        (number "10" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -15.24 10.16 0) (length 2.54)
+        (name "IN-" (effects (font (size 1.27 1.27))))
+        (number "11" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -15.24 5.08 0) (length 2.54)
+        (name "~{RST}/EN" (effects (font (size 1.27 1.27))))
+        (number "14" (effects (font (size 1.27 1.27)))))
+      (pin open_collector line (at -15.24 0 0) (length 2.54)
+        (name "~{FLT}" (effects (font (size 1.27 1.27))))
+        (number "13" (effects (font (size 1.27 1.27)))))
+      (pin open_collector line (at -15.24 -2.54 0) (length 2.54)
+        (name "RDY" (effects (font (size 1.27 1.27))))
+        (number "12" (effects (font (size 1.27 1.27)))))
+      (pin output line (at -15.24 -7.62 0) (length 2.54)
+        (name "APWM" (effects (font (size 1.27 1.27))))
+        (number "16" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at -15.24 -17.78 0) (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "9" (effects (font (size 1.27 1.27)))))
+      ;; --- lato secondario (riferito a COM, flottante) ---
+      (pin power_in line (at 15.24 17.78 180) (length 2.54)
+        (name "VDD" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27)))))
+      (pin output line (at 15.24 12.7 180) (length 2.54)
+        (name "OUTH" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27)))))
+      (pin output line (at 15.24 10.16 180) (length 2.54)
+        (name "OUTL" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27)))))
+      (pin input line (at 15.24 5.08 180) (length 2.54)
+        (name "CLMPI" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27)))))
+      (pin input line (at 15.24 0 180) (length 2.54)
+        (name "DESAT" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27)))))
+      (pin input line (at 15.24 -5.08 180) (length 2.54)
+        (name "AIN" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 15.24 -12.7 180) (length 2.54)
+        (name "VEE" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 15.24 -17.78 180) (length 2.54)
+        (name "COM" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27)))))
+    )
+  )
+
+  ;; =====================================================================
+  ;;  AMC1302DWV - amplificatore isolato per shunt, ingresso +/-50 mV
+  ;; =====================================================================
+  (symbol "AMC1302DWV"
+    (pin_names (offset 0.254))
+    (in_bom yes) (on_board yes)
+    (property "Reference" "U" (at -10.16 11.43 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "AMC1302DWV" (at 2.54 11.43 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_SO:SOIC-8_7.5x5.85mm_P1.27mm" (at 0 -14 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "TI SBAS812D, 06-2021" (at 0 -16.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Amplificatore isolato rinforzato per shunt, +/-50 mV, CMTI 100 kV/us"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+
+    (symbol "AMC1302DWV_0_1"
+      (rectangle (start -10.16 10.16) (end 10.16 -10.16)
+        (stroke (width 0.254) (type default)) (fill (type background)))
+      (polyline (pts (xy 0 10.16) (xy 0 -10.16))
+        (stroke (width 0.254) (type dash)) (fill (type none)))
+    )
+    (symbol "AMC1302DWV_1_1"
+      (pin power_in line (at -12.7 7.62 0) (length 2.54)
+        (name "VDD1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -12.7 2.54 0) (length 2.54)
+        (name "INP" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27)))))
+      (pin input line (at -12.7 0 0) (length 2.54)
+        (name "INN" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at -12.7 -7.62 0) (length 2.54)
+        (name "GND1" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 12.7 7.62 180) (length 2.54)
+        (name "VDD2" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27)))))
+      (pin output line (at 12.7 2.54 180) (length 2.54)
+        (name "OUTP" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27)))))
+      (pin output line (at 12.7 0 180) (length 2.54)
+        (name "OUTN" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at 12.7 -7.62 180) (length 2.54)
+        (name "GND2" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27)))))
+    )
+  )
+
+  ;; =====================================================================
+  ;;  AMC1311DWV - amplificatore isolato ad alta impedenza, 0...2 V
+  ;;  Stessa piedinatura dell'AMC1302: cambia solo il campo d'ingresso.
+  ;; =====================================================================
+  (symbol "AMC1311DWV"
+    (extends "AMC1302DWV")
+    (property "Value" "AMC1311DWV" (at 2.54 11.43 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Datasheet" "TI SBAS687" (at 0 -16.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Amplificatore isolato ad alta impedenza 0...2 V per misura di bus DC"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+  )
+
+  ;; =====================================================================
+  ;;  MGJ2D121505SC - DC-DC isolato 2 W, +15 / -5 V, per gate drive
+  ;; =====================================================================
+  (symbol "MGJ2D121505SC"
+    (pin_names (offset 0.254))
+    (in_bom yes) (on_board yes)
+    (property "Reference" "PS" (at -10.16 9 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "MGJ2D121505SC" (at 2.54 9 0)
+      (effects (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "PECD_P7:MGJ2_SIP7" (at 0 -11.5 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "Murata KDC_MGJ2_I01" (at 0 -14 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "DC-DC isolato 2 W, 12 V in (10.8...13.2), +15/-5 V out, C_iso 3 pF"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+
+    (symbol "MGJ2D121505SC_0_1"
+      (rectangle (start -10.16 7.62) (end 10.16 -7.62)
+        (stroke (width 0.254) (type default)) (fill (type background)))
+      (polyline (pts (xy 0 7.62) (xy 0 -7.62))
+        (stroke (width 0.254) (type dash)) (fill (type none)))
+    )
+    (symbol "MGJ2D121505SC_1_1"
+      (pin power_in line (at -12.7 5.08 0) (length 2.54)
+        (name "+Vin" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27)))))
+      (pin power_in line (at -12.7 -5.08 0) (length 2.54)
+        (name "0Vin" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27)))))
+      (pin power_out line (at 12.7 5.08 180) (length 2.54)
+        (name "+Vout" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27)))))
+      (pin power_out line (at 12.7 0 180) (length 2.54)
+        (name "0Vout" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27)))))
+      (pin power_out line (at 12.7 -5.08 180) (length 2.54)
+        (name "-Vout" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27)))))
+    )
+  )
+
+  ;; =====================================================================
+  ;;  Shunt a quattro terminali (Kelvin)
+  ;;  I terminali di misura NON coincidono con quelli di potenza: e' il
+  ;;  motivo per cui si sceglie un 4 terminali (doc. ausiliari 1, §8.4).
+  ;; =====================================================================
+  (symbol "R_Shunt_Kelvin"
+    (pin_names (offset 0.254) hide)
+    (in_bom yes) (on_board yes)
+    (property "Reference" "R" (at 0 3.81 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "0R0005" (at 0 -3.81 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "PECD_P7:R_Shunt_3920_Kelvin" (at 0 -6.35 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Description" "Shunt di misura a 4 terminali, 0.5 mOhm 2 W, basso TCR"
+      (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+
+    (symbol "R_Shunt_Kelvin_0_1"
+      (rectangle (start -3.81 1.27) (end 3.81 -1.27)
+        (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy -2.54 -1.27) (xy -2.54 -2.54))
+        (stroke (width 0.152) (type default)) (fill (type none)))
+      (polyline (pts (xy 2.54 -1.27) (xy 2.54 -2.54))
+        (stroke (width 0.152) (type default)) (fill (type none)))
+    )
+    (symbol "R_Shunt_Kelvin_1_1"
+      (pin passive line (at -6.35 0 0) (length 2.54)
+        (name "P1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 6.35 0 180) (length 2.54)
+        (name "P2" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at -2.54 -5.08 90) (length 2.54)
+        (name "S1" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27)))))
+      (pin passive line (at 2.54 -5.08 90) (length 2.54)
+        (name "S2" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27)))))
+    )
+  )
+)
