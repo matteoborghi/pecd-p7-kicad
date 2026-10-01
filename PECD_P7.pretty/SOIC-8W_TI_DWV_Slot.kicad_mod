@@ -1,33 +1,315 @@
 (footprint "SOIC-8W_TI_DWV_Slot"
-  (version 20240108)
-  (generator "PECD_P7_manuale")
-  (layer "F.Cu")
-  (descr "TI DWV (SOIC-8 wide) for AMC1302/AMC1311, manufacturer land pattern: pads 1.8 x 0.6 mm on rows 10.9 mm apart, 9.1 mm copper to copper. Through slot 1.5 x 8.5 mm under the body on Edge.Cuts: board creepage around the slot ends 10.1 mm against the 9.5 mm reinforced rule. Package surface creepage remains 8.5 mm (datasheet).")
-  (tags "SOIC isolator reinforced slot creepage")
-  (attr smd)
-  (fp_text reference "U**" (at 0 -4.425) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15))))
-  (fp_text value "SOIC-8W_TI_DWV_Slot" (at 0 4.425) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15))))
-  (pad "1" smd roundrect (at -5.45 -1.905) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "2" smd roundrect (at -5.45 -0.635) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "3" smd roundrect (at -5.45 0.635) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "4" smd roundrect (at -5.45 1.905) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "5" smd roundrect (at 5.45 1.905) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "6" smd roundrect (at 5.45 0.635) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "7" smd roundrect (at 5.45 -0.635) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (pad "8" smd roundrect (at 5.45 -1.905) (size 1.8 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25))
-  (fp_line (start -3.75 -2.925) (end 3.75 -2.925) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 3.75 -2.925) (end 3.75 2.925) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 3.75 2.925) (end -3.75 2.925) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -3.75 2.925) (end -3.75 -2.925) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -4.65 -2.505) (end -3.95 -2.505) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
-  (fp_line (start -6.6 -4.5) (end 6.6 -4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 6.6 -4.5) (end 6.6 4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 6.6 4.5) (end -6.6 4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start -6.6 4.5) (end -6.6 -4.5) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start -0.75 -3.5) (end -0.75 3.5) (stroke (width 0.05) (type solid)) (layer "Edge.Cuts"))
-  (fp_line (start 0.75 -3.5) (end 0.75 3.5) (stroke (width 0.05) (type solid)) (layer "Edge.Cuts"))
-  (fp_arc (start -0.75 3.5) (mid 0 4.25) (end 0.75 3.5) (stroke (width 0.05) (type solid)) (layer "Edge.Cuts"))
-  (fp_arc (start 0.75 -3.5) (mid 0 -4.25) (end -0.75 -3.5) (stroke (width 0.05) (type solid)) (layer "Edge.Cuts"))
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "TI DWV (SOIC-8 wide) for AMC1302/AMC1311, manufacturer land pattern: pads 1.8 x 0.6 mm on rows 10.9 mm apart, 9.1 mm copper to copper. Through slot 1.5 x 8.5 mm under the body on Edge.Cuts: board creepage around the slot ends 10.1 mm against the 9.5 mm reinforced rule. Package surface creepage remains 8.5 mm (datasheet).")
+	(tags "SOIC isolator reinforced slot creepage")
+	(property "Reference" "U**"
+		(at 0 -5.6 0)
+		(layer "F.SilkS")
+		(uuid "5d284e41-3c2b-46b3-9644-1ef43d11875f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOIC-8W_TI_DWV_Slot"
+		(at 0 5.6 0)
+		(layer "F.Fab")
+		(uuid "840cbfd8-e538-49b1-b34d-25cfd55985bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "115899d7-d8f7-4879-9169-5510ceaed8c4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "941933e3-4c9c-48ab-b97a-52ffaadc546e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.65 -2.505)
+		(end -3.95 -2.505)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4a09e26a-8869-4396-b5e8-bf1a85bd20a0")
+	)
+	(fp_line
+		(start -0.75 -3.5)
+		(end -0.75 3.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "4dbaad36-fd48-4452-b231-8bac04832976")
+	)
+	(fp_line
+		(start 0.75 -3.5)
+		(end 0.75 3.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ab1f80aa-e0cb-4ec8-ba0a-b34d55452c00")
+	)
+	(fp_arc
+		(start -0.75 -3.5)
+		(mid 0 -4.25)
+		(end 0.75 -3.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "46e92e31-d749-4abb-ac62-8168f228bec7")
+	)
+	(fp_arc
+		(start 0.75 3.5)
+		(mid 0 4.25)
+		(end -0.75 3.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e837520a-a598-4858-8e71-b95602b50c35")
+	)
+	(fp_line
+		(start -6.6 -4.5)
+		(end 6.6 -4.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4f0d6316-c3a4-454b-977f-7e9702c246c2")
+	)
+	(fp_line
+		(start -6.6 4.5)
+		(end -6.6 -4.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ee706e9f-5dee-49a3-805c-b908a2462366")
+	)
+	(fp_line
+		(start 6.6 -4.5)
+		(end 6.6 4.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ec6ba94b-bb07-42b4-abcc-82ae12eb1157")
+	)
+	(fp_line
+		(start 6.6 4.5)
+		(end -6.6 4.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "126e70f3-e686-40a8-a40a-8e49c12d6218")
+	)
+	(fp_line
+		(start -3.75 -2.925)
+		(end 3.75 -2.925)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc3e81c0-6b04-41fa-a202-8d1d131ebaad")
+	)
+	(fp_line
+		(start -3.75 2.925)
+		(end -3.75 -2.925)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "69742c8b-80e3-47c5-857c-56643e0a7d3b")
+	)
+	(fp_line
+		(start 3.75 -2.925)
+		(end 3.75 2.925)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0f0c10df-a3fc-49a8-9cb9-38aca9d1414b")
+	)
+	(fp_line
+		(start 3.75 2.925)
+		(end -3.75 2.925)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b748e07e-0615-4250-8050-59a1f1e033ee")
+	)
+	(pad "1" smd roundrect
+		(at -5.45 -1.905)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "8b8be40c-b442-4ad3-8bc9-4229dae4dcff")
+	)
+	(pad "2" smd roundrect
+		(at -5.45 -0.635)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "98f12e6d-16e4-4f62-8a70-0ebe33f765ab")
+	)
+	(pad "3" smd roundrect
+		(at -5.45 0.635)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1b11b845-5bf3-4150-b9e2-06bb7f52bc0e")
+	)
+	(pad "4" smd roundrect
+		(at -5.45 1.905)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "b398eb52-e6f0-4489-bd4d-eb713325522b")
+	)
+	(pad "5" smd roundrect
+		(at 5.45 1.905)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "0268e3b7-d5f7-4311-ad81-600ffdf413f1")
+	)
+	(pad "6" smd roundrect
+		(at 5.45 0.635)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "9de25368-649e-4322-8046-efd1c415c416")
+	)
+	(pad "7" smd roundrect
+		(at 5.45 -0.635)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "b35ae5e2-183b-489d-9697-fe184a4cae56")
+	)
+	(pad "8" smd roundrect
+		(at 5.45 -1.905)
+		(size 1.8 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "4eec639e-202a-4937-b15d-b44b06598e95")
+	)
+	(zone
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
+		(uuid "b09706f9-092d-45da-946f-b815bd6193dd")
+		(name "ZONA_ISOLATORE")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy -6.55 -2.6) (xy 6.55 -2.6) (xy 6.55 2.6) (xy -6.55 2.6)
+			)
+		)
+	)
+	(zone
+		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
+			"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
+			"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
+			"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
+			"In29.Cu" "In30.Cu"
+		)
+		(uuid "ac70ed39-03cc-4023-a969-774bf1d7b520")
+		(name "KEEPOUT_BARRIERA")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads not_allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy -4 -5.25) (xy 4 -5.25) (xy 4 5.25) (xy -4 5.25)
+			)
+		)
+	)
+	(embedded_fonts no)
 )
