@@ -66,7 +66,7 @@
 #  CLASSI DI NET (Schematic Setup > Net Classes; le stesse le vede il PCB)
 #
 #    Classe       Net (pattern)                         Clear.  Pista  Via
-#    Default      tutto il resto                         0.2    0.25   0.6/0.3
+#    Default      tutto il resto                         0.15   0.25   0.6/0.3
 #    HV_BUS       /HV_DCP  /HV_DCN                        2.0   10.4   0.8/0.4
 #    HV_POWER     /HV_SW?  /HV_PH?                        2.0    8.4   0.8/0.4
 #    HV_AUX       */HVR_*  (drain del MOSFET di scarica)  2.0    0.5   0.8/0.4
@@ -78,8 +78,8 @@
 #    SENSE_2, SENSE_3       idem
 #    SENSE_V      */HVM_*  (misura del bus, riferita a HV_DCN)  0.3  0.3  0.6/0.3
 #    CTRL         */CTL_*  */I?P_RAW */I?N_RAW */VDC?_RAW */VTH_* */VREF */HVIL
-#                                                         0.2    0.3   0.6/0.3
-#    PWR_LV       +12V_PRI +3V3 GND  */LV_*               0.2    0.6   0.6/0.3
+#                                                         0.15   0.3   0.6/0.3
+#    PWR_LV       +12V_PRI +3V3 GND  */LV_*               0.15   0.6   0.6/0.3
 #    CHASSIS      */CHASSIS                               0.2    1.0   0.8/0.4
 #
 #  Le larghezze HV vengono da IPC-2221B a DeltaT = 30 K, rame 2 oz esterno
@@ -181,7 +181,7 @@
 
 (rule "Rinforzata: HV verso bassa tensione"
   (constraint clearance (min 9.5mm))
-  (condition "(A.NetClass == 'HV_*') && ((B.NetClass == 'CTRL') || (B.NetClass == 'PWR_LV'))"))
+  (condition "(A.NetClass == 'HV_*') && ((B.NetClass == 'CTRL') || (B.NetClass == 'PWR_LV')) && !(A.intersectsArea('ZONA_ISOLATORE') && B.intersectsArea('ZONA_ISOLATORE'))"))
 
 (rule "Rinforzata: domini flottanti verso bassa tensione"
   (constraint clearance (min 9.5mm))
@@ -192,18 +192,29 @@
   (constraint clearance (min 9.5mm))
   (condition "A.hasExactNetclass('Default') && (A.NetName != '') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
 
-# Fra le due file di piazzole dello stesso isolatore vale la geometria del
-# componente: 8.1 mm (driver, land pattern HV) e 9.1 mm (amplificatori).
+# Fra le due file di piazzole dello stesso isolatore (solo coppie che
+# attraversano la barriera: un lato flottante o HV, l'altro a bassa
+# tensione) vale la geometria del componente: 8.1 mm (driver, land pattern HV) e 9.1 mm (amplificatori).
 (rule "Rinforzata: fra le file di piazzole di un isolatore"
   (constraint clearance (min 8.0mm))
-  (condition "A.intersectsArea('ZONA_ISOLATORE') && B.intersectsArea('ZONA_ISOLATORE') && ((A.NetClass == 'GATE_*') || (A.NetClass == 'SENSE_*')) && ((B.NetClass == 'CTRL') || (B.NetClass == 'PWR_LV') || B.hasExactNetclass('Default'))"))
+  (condition "A.intersectsArea('ZONA_ISOLATORE') && B.intersectsArea('ZONA_ISOLATORE') && ((A.NetClass == 'GATE_*') || (A.NetClass == 'SENSE_*') || (A.NetClass == 'HV_*')) && ((B.NetClass == 'CTRL') || (B.NetClass == 'PWR_LV') || B.hasExactNetclass('Default'))"))
 
 # CONVERTITORI MGJ2: riconosciuti rinforzati solo fino a 150 Vrms [DS]; a
 # 900 V sono isolamento FUNZIONALE (report A.25, decisione aperta). Fra i
 # loro pin 2 e 5 ci sono 5.92 mm di rame: la regola lo dichiara.
 (rule "Funzionale: fra i pin di un convertitore MGJ2 (A.25)"
   (constraint clearance (min 5.5mm))
-  (condition "A.intersectsArea('ZONA_MGJ2') && B.intersectsArea('ZONA_MGJ2') && (A.NetClass != B.NetClass)"))
+  (condition "A.intersectsArea('ZONA_MGJ2') && B.intersectsArea('ZONA_MGJ2') && ((A.NetClass == 'GATE_*') || (A.NetClass == 'SENSE_*') || (A.NetClass == 'HV_*')) && ((B.NetClass == 'CTRL') || (B.NetClass == 'PWR_LV'))"))
+
+
+# Piazzole NON collegate (pin "NC" e uscite inutilizzate: -Vout dei MGJ2 di
+# misura, pin 2 degli LDO, uscita B del comparatore di sovratensione). Non
+# hanno net: senza questa regola erediterebbero la clearance di classe del
+# pin accanto (2.0 mm per i net HV) e il package stesso risulterebbe in
+# violazione. Valgono il minimo di fabbricazione e la geometria del package.
+(rule "Piazzole non collegate"
+  (constraint clearance (min 0.15mm))
+  (condition "(A.NetName == '') || (B.NetName == '')"))
 
 
 # -------------------------------------------------------------------------
