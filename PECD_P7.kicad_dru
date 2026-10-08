@@ -190,7 +190,7 @@
 # Rete di sicurezza: un net senza classe e' trattato come bassa tensione.
 (rule "Net senza classe verso HV e domini flottanti"
   (constraint clearance (min 9.5mm))
-  (condition "A.hasExactNetclass('Default') && (A.NetName != '') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
+  (condition "A.hasExactNetclass('Default') && (A.NetName != '') && (A.NetName != 'unconnected-*') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
 
 # Fra le due file di piazzole dello stesso isolatore (solo coppie che
 # attraversano la barriera: un lato flottante o HV, l'altro a bassa
@@ -212,9 +212,11 @@
 # hanno net: senza questa regola erediterebbero la clearance di classe del
 # pin accanto (2.0 mm per i net HV) e il package stesso risulterebbe in
 # violazione. Valgono il minimo di fabbricazione e la geometria del package.
+# Nel PCB vero KiCad da' a ogni pin libero un net suo, "unconnected-(U342-NC-Pad2)":
+# conta come senza net (08/10/2026, trovato sul PCB dopo F8).
 (rule "Piazzole non collegate"
   (constraint clearance (min 0.15mm))
-  (condition "(A.NetName == '') || (B.NetName == '')"))
+  (condition "(A.NetName == '') || (B.NetName == '') || (A.NetName == 'unconnected-*') || (B.NetName == 'unconnected-*')"))
 
 
 # -------------------------------------------------------------------------
