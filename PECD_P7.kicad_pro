@@ -259,6 +259,230 @@
   "cvpcb": {
     "equivalence_files": []
   },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "field_name_whitespace": "warning",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
+      "ground_pin_not_ground": "warning",
+      "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
+      "label_dangling": "error",
+      "label_multiple_wires": "warning",
+      "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
+      "similar_labels": "warning",
+      "similar_power": "warning",
+      "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
+      "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
@@ -287,6 +511,204 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.2,
+        "name": "CHASSIS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 17,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 0.15,
+        "name": "CTRL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 15,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_DIS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 10,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_H1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_H2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_H3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 8,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_L1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_L2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 7,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "GATE_L3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 9,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 2.0,
+        "name": "HV_AUX",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 2.0,
+        "name": "HV_BUS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 10.4,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 1.6,
+        "name": "HV_DIV",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 2.0,
+        "name": "HV_POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 8.4,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 0.15,
+        "name": "PWR_LV",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 16,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "SENSE_1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 11,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "SENSE_2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 12,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "SENSE_3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 13,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "SENSE_V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 14,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -294,7 +716,164 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "HV_BUS",
+        "pattern": "*/HV_DC?"
+      },
+      {
+        "netclass": "HV_POWER",
+        "pattern": "*/HV_SW?"
+      },
+      {
+        "netclass": "HV_POWER",
+        "pattern": "*/HV_PH?"
+      },
+      {
+        "netclass": "HV_AUX",
+        "pattern": "*/HVR_*"
+      },
+      {
+        "netclass": "HV_DIV",
+        "pattern": "*/HVD_*"
+      },
+      {
+        "netclass": "HV_DIV",
+        "pattern": "*/HVB_*"
+      },
+      {
+        "netclass": "GATE_H1",
+        "pattern": "*/GH1_*"
+      },
+      {
+        "netclass": "GATE_H1",
+        "pattern": "*/drv_H1/*"
+      },
+      {
+        "netclass": "GATE_L1",
+        "pattern": "*/GL1_*"
+      },
+      {
+        "netclass": "GATE_L1",
+        "pattern": "*/drv_L1/*"
+      },
+      {
+        "netclass": "GATE_H2",
+        "pattern": "*/GH2_*"
+      },
+      {
+        "netclass": "GATE_H2",
+        "pattern": "*/drv_H2/*"
+      },
+      {
+        "netclass": "GATE_L2",
+        "pattern": "*/GL2_*"
+      },
+      {
+        "netclass": "GATE_L2",
+        "pattern": "*/drv_L2/*"
+      },
+      {
+        "netclass": "GATE_H3",
+        "pattern": "*/GH3_*"
+      },
+      {
+        "netclass": "GATE_H3",
+        "pattern": "*/drv_H3/*"
+      },
+      {
+        "netclass": "GATE_L3",
+        "pattern": "*/GL3_*"
+      },
+      {
+        "netclass": "GATE_L3",
+        "pattern": "*/drv_L3/*"
+      },
+      {
+        "netclass": "GATE_DIS",
+        "pattern": "*/GDIS_*"
+      },
+      {
+        "netclass": "GATE_DIS",
+        "pattern": "*/drv_DIS/*"
+      },
+      {
+        "netclass": "SENSE_1",
+        "pattern": "*/SNS1_*"
+      },
+      {
+        "netclass": "SENSE_1",
+        "pattern": "*/sense_1/*"
+      },
+      {
+        "netclass": "SENSE_2",
+        "pattern": "*/SNS2_*"
+      },
+      {
+        "netclass": "SENSE_2",
+        "pattern": "*/sense_2/*"
+      },
+      {
+        "netclass": "SENSE_3",
+        "pattern": "*/SNS3_*"
+      },
+      {
+        "netclass": "SENSE_3",
+        "pattern": "*/sense_3/*"
+      },
+      {
+        "netclass": "SENSE_V",
+        "pattern": "*/HVM_*"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/CTL_*"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/I?P_RAW"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/I?N_RAW"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/VDC?_RAW"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/VTH_*"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/VREF"
+      },
+      {
+        "netclass": "CTRL",
+        "pattern": "*/HVIL"
+      },
+      {
+        "netclass": "PWR_LV",
+        "pattern": "+12V_PRI"
+      },
+      {
+        "netclass": "PWR_LV",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "PWR_LV",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "PWR_LV",
+        "pattern": "*/LV_*"
+      },
+      {
+        "netclass": "CHASSIS",
+        "pattern": "*/CHASSIS"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -308,12 +887,250 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
+    "annotation": {
+      "method": 1,
+      "sort_order": 0
+    },
+    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Position Files",
+          "name": "${EXCLUDE_FROM_POS_FILES}",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufaccturer",
+          "name": "Manufaccturer",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "include_excluded_from_bom": true,
+      "name": "",
+      "sort_asc": false,
+      "sort_field": "${EXCLUDE_FROM_BOM}"
+    },
     "bus_aliases": {},
+    "connection_grid_size": 50.0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "hop_over_size_choice": 0,
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
+      "overbar_offset_ratio": 1.23,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
+    },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
-    "top_level_sheets": []
+    "meta": {
+      "version": 1
+    },
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "reuse_designators": true,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "PECD_P7.kicad_sch",
+        "name": "PECD_P7",
+        "uuid": "b057be91-eec0-4579-850d-11df28bf7930"
+      }
+    ],
+    "used_designators": "DZCL1101,QH1-3,QH801,QH901,QH1001,TP_SW2,TP_SW201,Q1-3,Q901,Q1001,TP_GH1C1,TP_GH1C301,J1-2,J4-8,J201-205,J601-602,J701-702,CVV1B1,CVV1B701,CDCL2-10,CDCL801-804,CDCL901-903,CDCL1001-1003,RO_VP1,RO_VP701,R1-12,R901,R1001,R1201,R1301,R1401,R1501,R1601,R1801,R1901,R2001,CV1A1-3,CV1A1701,CV1A1801,CV1A1901,C1-17,C901,C1001,C1201-1202,C1301-1302,C1401-1402,C1501-1502,C1601-1602,C1801,C1901,C2001-2002,C_DC2,C_DC201-202,RPU_FLT1,RPU_FLT601,H1,TP_GL301,C_CMP2-3,C_CMP401-403,TP1,TP_I1P1-2,TP_I1P401,PS_3V501,U1-11,U1201,U1301,U1401,U1501,U1601,U1801-1802,U1901-1902,U2001,CVDD2-14,CVDD1101-1102,CVDD1201-1202,CVDD1301-1302,CVDD1401-1402,CVDD1501-1502,CVDD1601-1602,CVDD2001-2002,PS1-9,PS1201,PS1301,PS1401,PS1501,PS1601,PS1801,PS1901,PS2001,RG_ON1-6,RG_ON1101,RG_ON1201,RG_ON1301,RG_ON1401,RG_ON1501,RG_ON1601,RG_ON2001,U_AMC1701,R_BL2-5,R_BL701-704,CV2B1-5,CV2B1701,CV2B1801-1802,CV2B1901-1902,RG_OFF1-6,RG_OFF1101,RG_OFF1201,RG_OFF1301,RG_OFF1401,RG_OFF1501,RG_OFF1601,RG_OFF2001,D1-26,D1201-1204,D1301-1304,D1401-1404,D1501-1504,D1601-1604,D2001-2004,DZ1-6,DZ1101,C_Y2,C_Y701-702,CVEE2-14,CVEE1101-1102,CVEE1201-1202,CVEE1301-1302,CVEE1401-1402,CVEE1501-1502,CVEE1601-1602,CVEE2001-2002,CVCC2-8,CVCC1101-1102,CVCC1201,CVCC1301,CVCC1401,CVCC1501,CVCC1601,CVCC2001,#PWR1-142,#PWR401-417,#PWR501-512,#PWR601-631,#PWR701-715,#PWR1101-1108,#PWR1201-1208,#PWR1301-1308,#PWR1401-1408,#PWR1501-1508,#PWR1601-1608,#PWR1701-1708,#PWR1801-1808,#PWR1901-1908,#PWR2001-2008,TP_GH2,TP_GH301,C_LDOI1-3,C_LDOI1701,C_LDOI1801,C_LDOI1901,C_LDOO1-3,C_LDOO1701,C_LDOO1801,C_LDOO1901,CV1B1-3,CV1B1701,CV1B1801,CV1B1901,C_LDOVI1,C_LDOVI701,CV2A1-5,CV2A1701,CV2A1801,CV2A1901,RF_P1-3,RF_P1701,RF_P1801,RF_P1901,CF_D1-3,CF_D1701,CF_D1801,CF_D1901,+12V_PRI701,+12V_PRI1101,+12V_PRI1701,CF_P1-3,CF_P1701,CF_P1801,CF_P1901,U_CMP3-5,U_CMP401-403,U_ESD2-3,U_ESD601-603,NT1-3,NT1801,NT1901,CO_D1701,RF_N1-3,RF_N1701,RF_N1801,RF_N1901,RO_P1-3,RO_P1701,RO_P1801,RO_P1901,U_LDOV701,U_CMP1B1,U_CMP1B401,C_REF1,C_REF401,CVV2A1,CVV2A701,R_REF1,R_REF401,C_12V501,R_TH2,R_TH401-402,F1,F501,CVV1A1,CVV1A701,RNTC2,RNTC601-602,RPU_RDY1,RPU_RDY601,PS_SNS1701,TH1-2,TH601-602,C_NTC2,C_NTC601-602,C_OV1,C_OV701,U_AMCV701,CO_V1,CO_V701,R_DIS1,R_DIS701,RDIV2-8,RDIV701-707,C_LDOVO1,C_LDOVO701,RO_VN1,RO_VN701,R_OV2,R_OV701-702,C_3V501,C_BULK501,C_IN501,CBL1101,#FLG501-503,CF_N1701,CVV2B701,D_REF401,D_TVS501,DCL1101,DDS1101,NT_GND501,NT_GND1701,PS_DRV1101,PS_PRE501,PS_V701,Q_DIS701,QL801,RDS1101,RO_N1701,RSH801,TP_DCN201,TP_GL1C301,TP_GND401,TP_I1N401,U_DRV1101,U_LDO1701,U_OV701,UU_OV701",
+    "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "b057be91-eec0-4579-850d-11df28bf7930",
+      "PECD_P7"
+    ],
+    [
+      "6f6bff06-b63d-4d2d-a08f-bb8855b011d2",
+      "1_power_stage"
+    ],
+    [
+      "2b7fb6b2-cc2c-435a-895e-509556f89604",
+      "2_gate_drive"
+    ],
+    [
+      "5c84f342-a0ba-46ba-8f00-5ec84c0e0cde",
+      "3_phase_sense"
+    ],
+    [
+      "fce2b1ad-c4cb-4776-bcfd-56a17bd7a820",
+      "4_aux_supply"
+    ],
+    [
+      "fd591901-44d6-436f-9812-9102f0c95a33",
+      "5_control_if"
+    ],
+    [
+      "a238ae79-b88f-46e4-9fa4-5e63a9633583",
+      "6_dclink_mgmt"
+    ],
+    [
+      "c7f56c20-8f0f-46c9-9281-b371c3c9ed6d",
+      "legA"
+    ],
+    [
+      "88b844ee-8b14-4c5d-adab-9c41cab746c5",
+      "legB"
+    ],
+    [
+      "130cf87c-c32d-41c0-9c61-4f216151e45e",
+      "legC"
+    ],
+    [
+      "36cafbe1-435d-4bb1-8229-298a336bfb2f",
+      "drv_H1"
+    ],
+    [
+      "dd3685e7-2d17-4ff1-bf7b-20f4618d921d",
+      "drv_H2"
+    ],
+    [
+      "6e2674e3-2a60-4480-9f31-32645d8830ea",
+      "drv_H3"
+    ],
+    [
+      "eb1b417a-1a14-4a5f-a01f-5b686c592cee",
+      "drv_L1"
+    ],
+    [
+      "ca57a2e5-1300-4f56-b703-d45c476e5dfd",
+      "drv_L2"
+    ],
+    [
+      "29e26c25-dd78-4b72-8cf3-a7d3251502c9",
+      "drv_L3"
+    ],
+    [
+      "6e1270db-9ccf-4e0e-8bf5-1af6b0fea085",
+      "sense_1"
+    ],
+    [
+      "eee8ec0a-9d88-4d28-9109-e893ecc2b2b7",
+      "sense_2"
+    ],
+    [
+      "e9a838e6-8ce4-45f2-8285-9197cda5cb94",
+      "sense_3"
+    ],
+    [
+      "49c70381-8c40-49c3-ba07-f224a487c023",
+      "drv_DIS"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
