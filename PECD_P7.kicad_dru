@@ -228,6 +228,15 @@
   (constraint clearance (min 9.5mm))
   (condition "(A.NetClass == 'CHASSIS') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
 
+# Fori di fissaggio M3 (H601-H606, 09/10/2026). La vite verso un contenitore a
+# terra e' a potenziale telaio, ma i fori NON hanno net: uniti fra loro sul PCB
+# darebbero sei collegamenti che si chiudono solo attraverso il contenitore.
+# Senza net varrebbe "Piazzole non collegate" (0,15 mm): questa regola, che
+# viene DOPO nel file e quindi vince, rimette la quota del telaio.
+(rule "Fori di fissaggio: da HV e domini flottanti"
+  (constraint clearance (min 9.5mm))
+  (condition "A.memberOfFootprint('H6*') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
+
 
 # -------------------------------------------------------------------------
 #  6. BORDO SCHEDA - il cammino superficiale si avvolge
