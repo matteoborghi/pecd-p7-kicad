@@ -4,6 +4,14 @@
 	(generator_version "10.0")
 	(uuid "1505836a-cc55-469c-9203-3be895c9c5a0")
 	(paper "A4")
+	(title_block
+		(title "DC-link management: voltage sensing and active discharge")
+		(date "2026-10-11")
+		(rev "1.0")
+		(company "University of Bologna - Automotive Power Electronics Circuit Design, Project 7")
+		(comment 1 "3-phase 2-level SiC traction inverter, 800 V / 30 A rms / 20 kHz")
+		(comment 2 "M. Borghi")
+	)
 	(lib_symbols
 		(symbol "Comparator:LM393"
 			(pin_names

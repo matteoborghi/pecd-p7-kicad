@@ -7,6 +7,14 @@
 		(legacy_teardrops no)
 	)
 	(paper "A2")
+	(title_block
+		(title "PCB: power stage, gate drive, sensing, auxiliary supply")
+		(date "2026-10-11")
+		(rev "1.0")
+		(company "University of Bologna - Automotive Power Electronics Circuit Design, Project 7")
+		(comment 1 "3-phase 2-level SiC traction inverter, 800 V / 30 A rms / 20 kHz")
+		(comment 2 "M. Borghi")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(4 "In1.Cu" signal)
@@ -70174,6 +70182,18 @@
 				(size 3.2 3.2)
 				(thickness 0.5)
 			)
+		)
+	)
+	(gr_text "FABRICATION NOTES - PECD P7 REV 1.0 (2026-10-11)\n1. 6 layers, finished thickness 1.6 mm. Outer copper 2 oz, inner 1 oz.\n   F.Cu / prepreg 0.10 / In1 / core 0.46 / In2 / prepreg 0.20 /\n   In3 / core 0.46 / In4 / prepreg 0.10 / B.Cu\n2. Laminate FR-4, CTI >= 600 V (IEC 60112, material group I), Tg >= 150 C.\n3. Dielectric withstand F.Cu (HV_DCP) to In1 (HV_DCN): 2 kV DC, 1 min,\n   every board.\n4. Routed through slots 1.5 mm wide, rounded ends, under the 7 drivers\n   (14.5 mm) and the 4 isolated amplifiers (8.5 mm): see Edge.Cuts.\n5. CONFORMAL COATING both faces over the high-voltage area, with UV tracer;\n   100 % UV inspection. Mask connectors, terminals and test points.\n   ALL HV CREEPAGE DISTANCES ASSUME POLLUTION DEGREE 1 FROM THIS COATING.\n6. Depanelise BEFORE coating.\n7. IPC-6012 class 2 minimum. Solder mask both faces, vias tented.\n   White silkscreen top."
+		(at 117 368 0)
+		(layer "Dwgs.User")
+		(uuid "12adbf55-2d4b-4df0-b2f1-ad47576784a2")
+		(effects
+			(font
+				(size 1.6 1.6)
+				(thickness 0.2)
+			)
+			(justify left top)
 		)
 	)
 	(segment
