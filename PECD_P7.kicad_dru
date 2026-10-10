@@ -287,12 +287,18 @@
 
 # Avvisi, non errori: il raccordo verso una piazzola e' per forza piu'
 # stretto della colata. L'avviso fa guardare ogni tratto stretto.
+# Rev. 10/10/2026: escluse le due sole connessioni di SEGNALE su net di
+# potenza, che portano milliampere e non la corrente di carico:
+#  - il catodo del diodo DESAT verso il drain (D212...D262, 0,5 mm);
+#  - la misura della tensione di bus attorno a U601 (U601, U602, R612,
+#    C601-C604, PS601): area di regola "MISURA_BUS" sul PCB.
+# Ogni altro tratto stretto di HV_BUS o HV_POWER resta segnalato.
 (rule "Larghezza minima del bus DC"
   (constraint track_width (min 10.4mm))
   (severity warning)
-  (condition "A.NetClass == 'HV_BUS'"))
+  (condition "A.NetClass == 'HV_BUS' && !A.intersectsCourtyard('D2?2') && !A.intersectsArea('MISURA_BUS')"))
 
 (rule "Larghezza minima delle fasi"
   (constraint track_width (min 8.4mm))
   (severity warning)
-  (condition "A.NetClass == 'HV_POWER'"))
+  (condition "A.NetClass == 'HV_POWER' && !A.intersectsCourtyard('D2?2')"))
