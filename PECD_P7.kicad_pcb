@@ -1576,7 +1576,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4742,7 +4742,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5678,6 +5678,17 @@
 			(uuid "53034c3a-4ce9-4369-9f92-bb6e06ad27eb")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1.587301587 1.625 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -9591,7 +9602,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -12702,6 +12713,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Fuse:Fuse_Littelfuse-NANO2-451_453"
 		(layer "F.Cu")
@@ -15775,6 +15797,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "PECD_P7:C_Disc_Y1_D16.5_P12.5mm"
 		(layer "F.Cu")
@@ -15978,6 +16011,17 @@
 			(uuid "3403b802-add2-4e96-93ad-2a950bf85722")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/C_Disc_Y1_D16.5_P12.5mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -16416,6 +16460,17 @@
 			(uuid "8e5832c2-9e8b-45d3-a3cf-f4497d5e0fce")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_3640_9110Metric"
 		(layer "F.Cu")
@@ -17466,6 +17521,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -18048,7 +18114,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -18891,6 +18957,17 @@
 			(uuid "b42d7690-3644-4690-9092-dfdb9552ceb0")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "PECD_P7:R_Shunt_3920_Kelvin"
 		(locked yes)
@@ -19131,6 +19208,17 @@
 			(uuid "7c170007-e534-4491-813b-08e4def5da6c")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1.587301587 1.625 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Package_SO:VSSOP-8_3x3mm_P0.65mm"
 		(layer "F.Cu")
@@ -20411,6 +20499,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -21164,6 +21263,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Package_TO_SOT_SMD:SOT-23-5"
 		(layer "F.Cu")
@@ -23027,7 +23137,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -23423,7 +23533,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25966,6 +26076,17 @@
 			(uuid "f9fa642b-8bdf-402f-8c2f-ba5cf24b0f3c")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_1206_3216Metric"
 		(layer "F.Cu")
@@ -28958,6 +29079,17 @@
 			(uuid "134beca0-8d7d-4c50-9896-afdd93110794")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MKP1848_12pin_P52.5mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
 		(layer "F.Cu")
@@ -29686,6 +29818,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_7.5x5.85mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
@@ -31008,6 +31151,17 @@
 			(uuid "607d89a5-f8a1-42b6-a3d9-379c2481b91e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MKP1848_6pin_P52.5mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -31564,6 +31718,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -33571,6 +33736,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_7.5x5.85mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -34127,6 +34303,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -34565,6 +34752,17 @@
 			(uuid "23169653-0e65-4968-a66d-01a26b783883")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -36531,6 +36729,17 @@
 			(uuid "ab70ffce-5234-44cf-ac60-7ee2a8af4558")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal"
 		(layer "F.Cu")
@@ -40470,7 +40679,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -43568,6 +43777,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -44733,6 +44953,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_7.5x5.85mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_1210_3225Metric"
 		(layer "F.Cu")
@@ -45586,6 +45817,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Diode_SMD:D_SOD-323F"
 		(layer "F.Cu")
@@ -46763,6 +47005,17 @@
 			(uuid "c7e4aae4-47fb-4f8f-80c4-17f054c236fb")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1.587301587 1.625 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -47717,6 +47970,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
 		(locked yes)
@@ -49225,6 +49489,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_1206_3216Metric"
 		(layer "F.Cu")
@@ -50417,6 +50692,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_7.5x5.85mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Diode_SMD:D_SOD-323F"
 		(layer "F.Cu")
@@ -51318,7 +51604,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -53642,6 +53928,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/TO-247-4L_Wolfspeed_Vertical.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -55849,7 +56146,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -56889,6 +57186,17 @@
 			(uuid "49dd30dc-4fa7-459d-bc3d-8dfba96a4a38")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "PECD_P7:C_Disc_Y1_D16.5_P12.5mm"
 		(layer "F.Cu")
@@ -57092,6 +57400,17 @@
 			(uuid "51fa7c63-a2bb-457c-9ccd-78d737dd4205")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/C_Disc_Y1_D16.5_P12.5mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -59825,7 +60144,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -62002,6 +62321,17 @@
 			(uuid "67ac5b5c-e1e9-4129-80f1-b55eb6514c3d")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SMC.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -64995,7 +65325,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_Murata_MGJ2DxxxxxxSC_THT.step"
+		(model "${KIPRJMOD}/PECD_P7.3dshapes/MGJ2_SIP7.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -67190,6 +67520,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -68831,6 +69172,17 @@
 			)
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16W_7.5x10.3mm_P1.27mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Package_TO_SOT_SMD:SOT-23-5"
 		(layer "F.Cu")

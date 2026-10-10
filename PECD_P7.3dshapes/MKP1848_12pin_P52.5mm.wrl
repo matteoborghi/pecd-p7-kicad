@@ -1,0 +1,3 @@
+#VRML V2.0 utf8
+# generato da 02 - KiCAD/schema/modelli_3d.py
+Transform { translation 10.3346 -19.9803 12.7953 children [ Shape { appearance Appearance { material Material { diffuseColor 0.55 0.58 0.62 specularColor 0.2 0.2 0.2 shininess 0.3 } } geometry Box { size 22.6378 51.1811 25.5906 } } ] }

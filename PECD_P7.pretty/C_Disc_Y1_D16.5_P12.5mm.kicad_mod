@@ -1,22 +1,162 @@
 (footprint "C_Disc_Y1_D16.5_P12.5mm"
-  (version 20240108)
-  (generator "PECD_P7_manuale")
-  (layer "F.Cu")
-  (descr "Y1 safety disc capacitor, Vishay AY1 4.7 nF (D max 16.5 mm, lead 0.6 mm), lead spacing 12.5 mm (ordering suffix ...LX). Pads 1.8 mm, drill 0.9 mm: 10.7 mm copper to copper, against 9.5 mm to chassis.")
-  (tags "capacitor disc Y1 safety")
-  (attr through_hole)
-  (fp_text reference "REF**" (at 6.25 -4.5) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15))))
-  (fp_text value "C_Disc_Y1_D16.5_P12.5mm" (at 6.25 4.5) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15))))
-  (pad "1" thru_hole circle (at 0 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask"))
-  (pad "2" thru_hole circle (at 12.5 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask"))
-  (fp_line (start -2 -3.6) (end 14.5 -3.6) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 14.5 -3.6) (end 14.5 3.6) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start 14.5 3.6) (end -2 3.6) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -2 3.6) (end -2 -3.6) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-  (fp_line (start -2.25 -3.85) (end 14.75 -3.85) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 14.75 -3.85) (end 14.75 3.85) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start 14.75 3.85) (end -2.25 3.85) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
-  (fp_line (start -2.25 3.85) (end -2.25 -3.85) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Y1 safety disc capacitor, Vishay AY1 4.7 nF (D max 16.5 mm, lead 0.6 mm), lead spacing 12.5 mm (ordering suffix ...LX). Pads 1.8 mm, drill 0.9 mm: 10.7 mm copper to copper, against 9.5 mm to chassis.")
+	(tags "capacitor disc Y1 safety")
+	(property "Reference" "REF**"
+		(at 6.25 -4.5 0)
+		(layer "F.SilkS")
+		(uuid "a4fb2b27-98c8-4222-8a04-efac98fca103")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_Disc_Y1_D16.5_P12.5mm"
+		(at 6.25 4.5 0)
+		(layer "F.Fab")
+		(uuid "82c37267-6d4e-4877-9ace-5c770cbdc5b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ac7f5ee-3698-45c2-8d2c-b38ce30501a2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f798b60e-c5a0-4167-8131-c80c1b42d44e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.25 -3.85)
+		(end 14.75 -3.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "24f51512-a00d-4b02-852d-784326cf45d7")
+	)
+	(fp_line
+		(start -2.25 3.85)
+		(end -2.25 -3.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0abfd371-c0b0-4fa2-8e2d-bc76dc0ce829")
+	)
+	(fp_line
+		(start 14.75 -3.85)
+		(end 14.75 3.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b5a1e6d4-a344-4eef-8cfb-f6a84834952f")
+	)
+	(fp_line
+		(start 14.75 3.85)
+		(end -2.25 3.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5b9c9e60-e3c3-4785-bd02-e9256f068cc9")
+	)
+	(fp_line
+		(start -2 -3.6)
+		(end 14.5 -3.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "567fe376-fe84-4edb-be65-730c3f8824a1")
+	)
+	(fp_line
+		(start -2 3.6)
+		(end -2 -3.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "830f2ca2-f65a-40f6-b6de-ba8730c0f2fe")
+	)
+	(fp_line
+		(start 14.5 -3.6)
+		(end 14.5 3.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4b63eba6-f85a-48c4-a8a8-73982bc55d2b")
+	)
+	(fp_line
+		(start 14.5 3.6)
+		(end -2 3.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "067e07ab-6af3-4501-8678-5d7c9fb9fe24")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d8ff65a0-ccc2-4333-b1ed-3d5562630d0f")
+	)
+	(pad "2" thru_hole circle
+		(at 12.5 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6e90a051-cf16-43d7-abd3-4ecfb8a25f06")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/PECD_P7.3dshapes/C_Disc_Y1_D16.5_P12.5mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
