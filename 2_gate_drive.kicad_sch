@@ -1252,7 +1252,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 78.74 137.6679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1364,7 +1364,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 53.34 163.0679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1475,7 +1475,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 53.34 137.6679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1587,7 +1587,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 78.74 163.0679 0)
 			(show_name no)
 			(do_not_autoplace no)

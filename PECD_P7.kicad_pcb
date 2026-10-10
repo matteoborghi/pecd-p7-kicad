@@ -199,7 +199,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "28358356-d251-469f-a4ff-eecbb24b5c24")
@@ -3223,7 +3223,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "b6c6bc36-9a61-465d-bdf0-4f1ff2c52bed")
@@ -6898,7 +6898,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 3"
+		(property "Value" "M6 phase 3"
 			(at 0 7.35 0)
 			(layer "F.Fab")
 			(uuid "8cdc68de-f8c5-4dc1-a411-a2ad1dad4c3e")
@@ -7352,7 +7352,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "98180d32-cf8e-46f4-962a-2d0df21fcb89")
@@ -11702,7 +11702,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "f6b6567e-2310-41d3-b232-b32cc035b0a2")
@@ -13334,7 +13334,7 @@
 				)
 			)
 		)
-		(property "Value" "telaio M4"
+		(property "Value" "M4 chassis"
 			(at 0 5.25 0)
 			(layer "F.Fab")
 			(uuid "a2ce1904-cc54-47e2-ace5-ff7225e072f1")
@@ -22364,7 +22364,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "d15d2998-c1df-4392-b1c2-5c3dbbaff2c6")
@@ -23767,7 +23767,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "3d7c1d12-a1b8-4adb-8daa-c935a49a3bfd")
@@ -25677,7 +25677,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "661c088d-3191-4c11-a681-f3cc474f7351")
@@ -27903,7 +27903,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "0fd2fb90-4160-4b10-9879-f244d9958702")
@@ -39545,7 +39545,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "555e1397-1612-4e19-8e79-0009f3267e3a")
@@ -48008,7 +48008,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "7961e2a6-6e26-4101-acf7-f440e065de3a")
@@ -48237,7 +48237,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "7691875e-befa-41fa-a84c-32e5e496e054")
@@ -54162,7 +54162,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "db6940e1-d8e8-4e0f-9bc9-05a820bfffef")
@@ -54684,7 +54684,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 1"
+		(property "Value" "M6 phase 1"
 			(at 0 7.35 0)
 			(layer "F.Fab")
 			(uuid "abfbba39-3ece-4b5b-833a-008a3ae0dbc1")
@@ -58029,7 +58029,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "017ba9d0-40f7-4086-bc53-6d381635ec1b")
@@ -61621,7 +61621,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 2"
+		(property "Value" "M6 phase 2"
 			(at 0 7.35 0)
 			(layer "F.Fab")
 			(uuid "60fb1753-41d3-4ec9-917e-55fdad24ae9b")
@@ -61878,7 +61878,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 0 4.15 0)
 			(layer "F.Fab")
 			(uuid "c1949a53-5cc0-4424-a4c9-9c063f5974fc")
@@ -62555,7 +62555,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 0 2.5 0)
 			(layer "F.Fab")
 			(uuid "8dc7c5b6-c0d2-4593-80d6-dd208afac1b4")

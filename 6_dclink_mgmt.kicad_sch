@@ -5708,7 +5708,7 @@
 				)
 			)
 		)
-		(property "Value" "telaio M4"
+		(property "Value" "M4 chassis"
 			(at 241.3 72.39 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5817,7 +5817,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5926,7 +5926,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6035,7 +6035,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6144,7 +6144,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6253,7 +6253,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 88.90 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6362,7 +6362,7 @@
 				)
 			)
 		)
-		(property "Value" "fissaggio M3"
+		(property "Value" "M3 fixing"
 			(at 267.97 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)

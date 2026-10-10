@@ -2732,7 +2732,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 110.998 187.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3376,7 +3376,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 38.608 187.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4717,7 +4717,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 72.898 187.96 90)
 			(show_name no)
 			(do_not_autoplace no)

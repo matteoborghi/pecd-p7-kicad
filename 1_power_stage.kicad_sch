@@ -1596,7 +1596,7 @@
 				)
 			)
 		)
-		(property "Value" "TP nero"
+		(property "Value" "TP black"
 			(at 152.908 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1816,7 +1816,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 2"
+		(property "Value" "M6 phase 2"
 			(at 118.11 142.24 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2152,7 +2152,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 3"
+		(property "Value" "M6 phase 3"
 			(at 118.11 129.54 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2262,7 +2262,7 @@
 				)
 			)
 		)
-		(property "Value" "M6 fase 1"
+		(property "Value" "M6 phase 1"
 			(at 118.11 154.94 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2372,7 +2372,7 @@
 				)
 			)
 		)
-		(property "Value" "TP rosso"
+		(property "Value" "TP red"
 			(at 152.908 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
