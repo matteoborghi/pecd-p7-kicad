@@ -4434,7 +4434,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9294,7 +9294,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17806,7 +17806,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18209,7 +18209,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-3EKF1002V"
+		(property "MPN" "ERJ-3EKF2201V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40371,7 +40371,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -45245,7 +45245,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-3EKF1002V"
+		(property "MPN" "ERJ-3EKF2201V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51296,7 +51296,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -55838,7 +55838,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63388,7 +63388,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-3EKF2151V"
+		(property "MPN" "ERJ-3EKF1002V"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -65017,7 +65017,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")

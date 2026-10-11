@@ -4781,7 +4781,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-3EKF1002V"
+		(property "MPN" "ERJ-3EKF2201V"
 			(at 254 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -7904,7 +7904,7 @@
 				)
 			)
 		)
-		(property "MPN" "ERJ-3EKF1002V"
+		(property "MPN" "ERJ-3EKF2201V"
 			(at 228.6 38.1 0)
 			(hide yes)
 			(show_name no)

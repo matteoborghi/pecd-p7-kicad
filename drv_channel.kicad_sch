@@ -4389,7 +4389,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Murata Power Solutions"
 			(at 228.6 75.72 0)
 			(hide yes)
 			(show_name no)
