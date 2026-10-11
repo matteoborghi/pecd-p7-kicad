@@ -172,6 +172,23 @@
 
 
 # -------------------------------------------------------------------------
+#  3b. STRATI INTERNI (rev. 1.1, 11/10/2026)
+# -------------------------------------------------------------------------
+# Fra conduttori immersi nel laminato non c'e' una superficie che si sporca:
+# i 4,5 mm di sopra sono un creepage di superficie in PD2. Per i conduttori
+# interni IPC-2221B (tab. 6-1, colonna B1) chiede 0,0025 mm/V oltre 500 V:
+# 2,25 mm a 900 V. Vale solo per il piano HV_DCN su In1 verso gli altri net HV
+# e verso i domini del lato alto (riferiti al nodo di commutazione); i domini
+# riferiti a HV_DCN hanno gia' la loro regola. Isolamento FUNZIONALE: la
+# barriera rinforzata verso la bassa tensione (sezione 4) non cambia.
+# Effetto: fori piu' piccoli nel piano sotto i MOSFET, maglia di commutazione
+# da ~12 a ~8 nH (estrazione in 02 - KiCAD/maglia/).
+(rule "Strati interni: HV_DCN verso altri net HV e domini del lato alto"
+  (layer inner)
+  (constraint clearance (min 2.25mm))
+  (condition "(A.NetName == '*HV_DCN') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_H?') || (B.NetClass == 'SENSE_1') || (B.NetClass == 'SENSE_2') || (B.NetClass == 'SENSE_3')) && (A.Net != B.Net)"))
+
+# -------------------------------------------------------------------------
 #  4. ISOLAMENTO RINFORZATO VERSO LA BASSA TENSIONE
 # -------------------------------------------------------------------------
 # Rinforzato = doppio del base. PD2 gruppo I a 900 V: 9.00 mm; si adottano

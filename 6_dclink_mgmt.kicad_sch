@@ -7,7 +7,7 @@
 	(title_block
 		(title "DC-link management: voltage sensing and active discharge")
 		(date "2026-10-11")
-		(rev "1.0")
+		(rev "1.1")
 		(company "University of Bologna - Automotive Power Electronics Circuit Design, Project 7")
 		(comment 1 "3-phase 2-level SiC traction inverter, 800 V / 30 A rms / 20 kHz")
 		(comment 2 "M. Borghi")
