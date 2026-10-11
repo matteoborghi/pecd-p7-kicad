@@ -10,7 +10,7 @@
 	(title_block
 		(title "PCB: power stage, gate drive, sensing, auxiliary supply")
 		(date "2026-10-11")
-		(rev "1.1")
+		(rev "1.2")
 		(company "University of Bologna - Automotive Power Electronics Circuit Design, Project 7")
 		(comment 1 "3-phase 2-level SiC traction inverter, 800 V / 30 A rms / 20 kHz")
 		(comment 2 "M. Borghi")
@@ -24525,6 +24525,113 @@
 			)
 		)
 	)
+	(footprint "Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "6b2f92c3-9676-42a0-be07-69e08880a0d8")
+		(at 472.5 135.5)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "FID3"
+			(at 0 -1.95 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "37cdce86-5f05-4f43-9976-f96be9734ac0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "2301886f-97b2-4f59-ab3d-29518add7468")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "40e8f4cc-d231-4353-8273-8b6d28627564")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a52357fe-374c-4ae2-a652-fb012d053cf3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "fiducial"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cf8e9597-eb48-4d5b-9db6-91093e5080f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "fa0f8456-7c9c-4292-ac44-f495a2f31df0")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "ee23632f-30e6-4742-8f0b-538785dfa641")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "2b3c72f1-8039-4538-8c09-b2d223f07f4e")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(uuid "621d6b88-bfa2-47dc-87c5-ff8334e0ed6e")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "6b540426-5385-4042-9c51-6b0fbd05b203")
@@ -25659,6 +25766,113 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "6f7015ee-4248-4e2e-b9a3-46b55a7d1f62")
+		(at 466.5 64.5)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "FID1"
+			(at 0 -1.95 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d849275d-c4fd-40f7-8f72-8613a74b9aaa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "ffd2fade-d154-4b73-8c25-c1b0afad84b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "596ee353-f113-47cd-8263-c19ca080b2c3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45f6679f-2c07-4a17-9b51-7336721ce6de")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "fiducial"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b6813849-cdf7-4a79-83e1-487da08a2fc9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "274a5754-53cb-4a94-815d-1b2e20e76ba2")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "430a8c95-6ac1-4cc1-b8df-f9f2772bfc75")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "96bf0d95-053e-4ad3-9298-e558ef376d48")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(uuid "cbf9dbbb-9c95-4ec8-b140-88ea3111b2ec")
+		)
+		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 		(layer "F.Cu")
@@ -27885,6 +28099,113 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "7ec8d413-7c85-44db-8eea-0e4acdd9bd14")
+		(at 121.5 135.5)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "FID2"
+			(at 0 -1.95 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "08392ad5-5e8b-4c1e-9725-4043b8ec5f8f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "77eeb774-7e67-48a0-a499-9314a9c0a081")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "25dcf1cb-9952-4dbd-8289-000eab72f88f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e066f75f-7918-4448-8038-87da5d0835da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "fiducial"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ab79e792-dc30-4e33-83da-ae26571f8cd4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ec9964ca-432e-47ec-8a62-df1a6f0b5bd8")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "98e792e9-5b2f-47ec-abb5-661b6d5e8c29")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a336a71e-3eca-4ed3-9dfa-703cebe7717e")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(uuid "a86bac73-95ba-4898-97e9-1e7e4ffede90")
+		)
+		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 		(layer "F.Cu")
@@ -69959,7 +70280,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "ff3d9bdc-062d-4487-aa69-0dacb66a99d8")
+		(uuid "d84ea966-3a24-4900-b103-0dd9aa395f43")
 	)
 	(gr_line
 		(start 316 259.149147)
@@ -69969,7 +70290,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "7f3f1c1a-4f28-4c71-8c0e-2ff29e876c02")
+		(uuid "1e517d31-c30b-4bb6-a06b-9435fcde3a2e")
 	)
 	(gr_line
 		(start 316 262.324573)
@@ -69979,7 +70300,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "837af866-43eb-4a03-8897-72bcfa7bed51")
+		(uuid "8fa317ad-fd78-44ab-965c-c5ae65527d3a")
 	)
 	(gr_line
 		(start 316 267.087713)
@@ -69989,7 +70310,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "fd43791d-ac27-441f-ad42-8f170109424c")
+		(uuid "3a98e82e-84d4-4fb2-9ac9-8b88ec739740")
 	)
 	(gr_line
 		(start 321.5 268.675426)
@@ -69999,7 +70320,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "07bda69f-96fd-401d-be81-fca977eaf3df")
+		(uuid "3cb49828-78ca-41d3-9ae0-c8f23257653a")
 	)
 	(gr_rect
 		(start 110 169.63)
@@ -70111,6 +70432,270 @@
 		(layer "Dwgs.User")
 		(uuid "a8b731f1-e347-45ac-9b02-4895a03a8aba")
 	)
+	(gr_rect
+		(start 116.975 93.935)
+		(end 134.47 111.155)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "54a7fbfa-7931-43cd-8acf-1a33bf2e8855")
+	)
+	(gr_rect
+		(start 117.525 74.025)
+		(end 126.475 82.975)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "0c88a646-16ec-46f8-aa8d-3da6ebaa2f20")
+	)
+	(gr_rect
+		(start 117.525 350.525)
+		(end 126.475 359.475)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "051cce4e-a3a0-491a-8a27-4a71dba40c13")
+	)
+	(gr_rect
+		(start 120.845 59.975)
+		(end 138.065 77.47)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "63890ee5-66a5-4065-a7a5-b4ef0d807b71")
+	)
+	(gr_rect
+		(start 145.425 323.425)
+		(end 158.575 336.575)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "4d5b2f3c-dd2a-4beb-90e9-f2eea49ae8a1")
+	)
+	(gr_rect
+		(start 214.325 102.325)
+		(end 219.675 107.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "f547efb9-10dd-4e9d-b13a-ba1db2802439")
+	)
+	(gr_rect
+		(start 218.325 102.325)
+		(end 223.675 107.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "2b052d00-7427-474f-83de-dcdf46de29ac")
+	)
+	(gr_rect
+		(start 222.325 102.325)
+		(end 227.675 107.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "5c9bc458-360a-4b15-8ed7-20d2b1167df7")
+	)
+	(gr_rect
+		(start 225.825 154.825)
+		(end 231.175 160.175)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "424341b0-f3ce-489f-9240-1e58c38e2c76")
+	)
+	(gr_rect
+		(start 225.825 159.325)
+		(end 231.175 164.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "b0115393-c55b-49f9-8aa8-43b1eb5f327a")
+	)
+	(gr_rect
+		(start 247.325 198.325)
+		(end 252.675 203.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "14aef6a3-98f3-41ba-8e78-c7fbf39a8501")
+	)
+	(gr_rect
+		(start 251.325 223.325)
+		(end 268.675 240.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "de31808e-a023-433d-8f72-687d5e322201")
+	)
+	(gr_rect
+		(start 255.825 154.825)
+		(end 261.175 160.175)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "0751db9e-795e-4f18-b77d-c5bac86681a6")
+	)
+	(gr_rect
+		(start 255.825 159.325)
+		(end 261.175 164.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "f5d487f3-fe78-449e-b800-4c2f22e6c771")
+	)
+	(gr_rect
+		(start 259.375 63.754999)
+		(end 322.885 78.74)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "aae36966-8e19-4f3d-b59d-567c00254a6a")
+	)
+	(gr_rect
+		(start 288.325 229.325)
+		(end 293.675 234.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "c72fa34e-8868-44ba-8b95-edd70b08f791")
+	)
+	(gr_rect
+		(start 292.525 75.025)
+		(end 301.475 83.975)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "554663f0-b7fd-4ebd-bf24-f11c247f0adb")
+	)
+	(gr_rect
+		(start 292.525 260.524999)
+		(end 301.475 269.475)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "e4ee86ba-90b3-4a4d-8ee5-eab6bde1ff3b")
+	)
+	(gr_rect
+		(start 341.325 223.325)
+		(end 358.675 240.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "5d018a77-8a1f-4dc7-863d-41320d86cb38")
+	)
+	(gr_rect
+		(start 431.325 223.325)
+		(end 448.675 240.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "1c2da436-dc1c-4be4-85b3-01b4f73dbb0b")
+	)
+	(gr_rect
+		(start 438.325 256.325)
+		(end 455.675 273.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "12637764-3ad3-41c4-9150-c49f930bb478")
+	)
+	(gr_rect
+		(start 438.325 291.325)
+		(end 455.675 308.675)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "56d9dc5a-7c4c-4437-8f2a-277bd4293009")
+	)
+	(gr_rect
+		(start 467.525 60.525)
+		(end 476.475 69.475)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "f2a8b655-597e-4e7b-a54f-e8c558fe9436")
+	)
+	(gr_rect
+		(start 467.525 350.525)
+		(end 476.475 359.475)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "9d5f068f-9888-4672-8401-0eecc88db04b")
+	)
 	(gr_line
 		(start 117 60)
 		(end 477 60)
@@ -70154,7 +70739,7 @@
 	(gr_text "HVIL"
 		(at 126 112 0)
 		(layer "F.SilkS")
-		(uuid "8523361a-dee3-4c44-a4b1-30e8378b375c")
+		(uuid "88604fea-2950-4a7b-bd0e-c9a26a992061")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -70165,7 +70750,7 @@
 	(gr_text "12 V IN"
 		(at 148 64 0)
 		(layer "F.SilkS")
-		(uuid "cdd20949-5b5e-4a27-90f7-662061295ed4")
+		(uuid "31d97438-d6e5-4264-ae98-b569c58b327f")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -70176,7 +70761,7 @@
 	(gr_text "CONTROL I/F"
 		(at 249 72 0)
 		(layer "F.SilkS")
-		(uuid "061fc46b-b65a-4956-b4f9-6a64898bf4eb")
+		(uuid "6034dd0b-8754-4015-9c41-86d444ca8aaf")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -70184,10 +70769,10 @@
 			)
 		)
 	)
-	(gr_text "REV 1.1   2026-10-11   M. BORGHI   UNIVERSITY OF BOLOGNA"
+	(gr_text "REV 1.2   2026-10-11   M. BORGHI   UNIVERSITY OF BOLOGNA"
 		(at 410 97 0)
 		(layer "F.SilkS")
-		(uuid "bc76a33a-f7f6-44a5-8308-a6f2150e97fc")
+		(uuid "9f63d94b-45a5-4a2c-ae12-b69d5d3c245e")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -70198,7 +70783,7 @@
 	(gr_text "DC-LINK MAY STAY CHARGED: CHECK DISCHARGE BEFORE TOUCHING"
 		(at 380 269 0)
 		(layer "F.SilkS")
-		(uuid "f3372eb0-9ade-43d3-af29-22a8d7e0e16e")
+		(uuid "9fff8c9a-ea40-4164-a40e-465d9978ce12")
 		(effects
 			(font
 				(size 2 2)
@@ -70209,7 +70794,7 @@
 	(gr_text "PECD P7  -  3-PHASE SiC TRACTION INVERTER  800 V / 30 A rms / 20 kHz"
 		(at 410 92 0)
 		(layer "F.SilkS")
-		(uuid "24ba915d-fa82-44fa-be1a-30db2784c112")
+		(uuid "8811767a-5d85-4170-b3d0-8b367566650a")
 		(effects
 			(font
 				(size 2 2)
@@ -70220,7 +70805,7 @@
 	(gr_text "CHASSIS"
 		(at 152 340 0)
 		(layer "F.SilkS")
-		(uuid "a2f7c6b2-5e6f-46be-a738-bb11cc01c7bf")
+		(uuid "32371fe3-cd56-40ad-bd25-b57204cadf1d")
 		(effects
 			(font
 				(size 2.5 2.5)
@@ -70231,7 +70816,7 @@
 	(gr_text "PH1"
 		(at 260 243.5 0)
 		(layer "F.SilkS")
-		(uuid "a13fd9d2-ddbc-4dcd-b3e7-b54fa0c95c38")
+		(uuid "bc31b84c-955d-4466-b5fd-bd379fd6beae")
 		(effects
 			(font
 				(size 3 3)
@@ -70242,7 +70827,7 @@
 	(gr_text "PH2"
 		(at 350 243.5 0)
 		(layer "F.SilkS")
-		(uuid "bf0ec035-0f2f-4358-b4d1-1b4430dfb853")
+		(uuid "f4464b50-6995-49fe-ad44-8f26628b5fc4")
 		(effects
 			(font
 				(size 3 3)
@@ -70253,7 +70838,7 @@
 	(gr_text "PH3"
 		(at 440 243.5 0)
 		(layer "F.SilkS")
-		(uuid "8a9eecfe-2dc6-4f9e-be15-0a64f90d1962")
+		(uuid "2111b2c7-ed88-4a34-80b6-bdc1dcd1fda4")
 		(effects
 			(font
 				(size 3 3)
@@ -70264,7 +70849,7 @@
 	(gr_text "DC+"
 		(at 446.292893 253.292893 0)
 		(layer "F.SilkS")
-		(uuid "6b10e576-804f-4765-bda0-d935275744dc")
+		(uuid "4e7a2dd9-0386-4be7-b960-bd542b53d9b7")
 		(effects
 			(font
 				(size 3 3)
@@ -70275,7 +70860,7 @@
 	(gr_text "DC-"
 		(at 447 311.5 0)
 		(layer "F.SilkS")
-		(uuid "cde977ee-fcce-482a-a0b5-d4444af439c7")
+		(uuid "9a658b7d-61d7-458e-bca7-efcdca3b98c7")
 		(effects
 			(font
 				(size 3 3)
@@ -70286,7 +70871,7 @@
 	(gr_text "DANGER  -  HIGH VOLTAGE  800 V DC"
 		(at 380 262 0)
 		(layer "F.SilkS")
-		(uuid "95573b26-ced9-4127-b4b1-9298e16475f3")
+		(uuid "7989ffc5-2d83-4532-b885-d42d225bb1a0")
 		(effects
 			(font
 				(size 3.2 3.2)
@@ -70306,16 +70891,27 @@
 			(justify left)
 		)
 	)
-	(gr_text "FABRICATION NOTES - PECD P7 REV 1.1 (2026-10-11)\n1. 6 layers, finished thickness 1.6 mm. Outer copper 2 oz, inner 1 oz.\n   F.Cu / prepreg 0.10 / In1 / core 0.46 / In2 / prepreg 0.20 /\n   In3 / core 0.46 / In4 / prepreg 0.10 / B.Cu\n2. Laminate FR-4, CTI >= 600 V (IEC 60112, material group I), Tg >= 150 C.\n3. Dielectric withstand F.Cu (HV_DCP) to In1 (HV_DCN): 2 kV DC, 1 min,\n   every board.\n4. Routed through slots 1.5 mm wide, rounded ends, under the 7 drivers\n   (14.5 mm) and the 4 isolated amplifiers (8.5 mm): see Edge.Cuts.\n5. CONFORMAL COATING both faces over the high-voltage area, with UV tracer;\n   100 % UV inspection. Mask connectors, terminals and test points.\n   ALL HV CREEPAGE DISTANCES ASSUME POLLUTION DEGREE 1 FROM THIS COATING.\n6. Depanelise BEFORE coating.\n7. IPC-6012 class 2 minimum. Solder mask both faces, vias tented.\n   White silkscreen top."
+	(gr_text "FABRICATION NOTES - PECD P7 REV 1.2 (2026-10-11)\n1. 6 layers, finished thickness 1.6 mm. Outer copper 2 oz, inner 1 oz.\n   F.Cu / prepreg 0.10 / In1 / core 0.46 / In2 / prepreg 0.20 /\n   In3 / core 0.46 / In4 / prepreg 0.10 / B.Cu\n2. Laminate FR-4, CTI >= 600 V (IEC 60112, material group I), Tg >= 150 C.\n3. Dielectric withstand F.Cu (HV_DCP) to In1 (HV_DCN): 2 kV DC, 1 min,\n   every board.\n4. Routed through slots 1.5 mm wide, rounded ends, under the 7 drivers\n   (14.5 mm) and the 4 isolated amplifiers (8.5 mm): see Edge.Cuts.\n5. CONFORMAL COATING both faces over the high-voltage area, with UV tracer;\n   100 % UV inspection. Mask the areas drawn on Cmts.User (connectors,\n   terminals, fixing holes, test points).\n   ALL HV CREEPAGE DISTANCES ASSUME POLLUTION DEGREE 1 FROM THIS COATING.\n6. Depanelise BEFORE coating.\n7. IPC-6012 class 2 minimum. Solder mask both faces, vias tented.\n   White silkscreen top.\n8. Fiducials FID1-FID3 (1 mm, top side) for automatic assembly.\n9. R602-R605 (2 W bleeders, hot spot up to 150 C): body 4 mm above the\n   board, formed leads. Q1xx and Q601: clamp to the cold rail BEFORE\n   soldering (assembly instructions, montaggio.md).\n10. Serial number and date code in the S/N box, every board."
 		(at 117 368 0)
 		(layer "Dwgs.User")
-		(uuid "939698bd-5fcb-46c8-bf5f-0a47c494ab3b")
+		(uuid "06fe9531-2462-4e71-9dcc-1a86cae7b08d")
 		(effects
 			(font
 				(size 1.6 1.6)
 				(thickness 0.2)
 			)
 			(justify left top)
+		)
+	)
+	(gr_text "Cmts.User: COATING KEEP-OUT - mask these areas before conformal coating (fab note 5)"
+		(at 380 372 0)
+		(layer "Cmts.User")
+		(uuid "f7b3eb24-e027-4ebc-aaf0-827e8f479a94")
+		(effects
+			(font
+				(size 1.6 1.6)
+				(thickness 0.2)
+			)
 		)
 	)
 	(segment

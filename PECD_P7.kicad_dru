@@ -255,6 +255,17 @@
   (condition "A.memberOfFootprint('H6*') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
 
 
+# Fiducial (rev. 1.2): area libera da 1 mm (colata fuori dall'apertura del
+# solder mask), poi verso HV la quota dei fori di fissaggio. L'ordine conta:
+# fra le regole che si applicano vince l'ultima.
+(rule "Fiducial: area libera"
+  (constraint clearance (min 1.0mm))
+  (condition "A.memberOfFootprint('FID*')"))
+
+(rule "Fiducial: da HV e domini flottanti"
+  (constraint clearance (min 9.5mm))
+  (condition "A.memberOfFootprint('FID*') && ((B.NetClass == 'HV_*') || (B.NetClass == 'GATE_*') || (B.NetClass == 'SENSE_*'))"))
+
 # -------------------------------------------------------------------------
 #  6. BORDO SCHEDA - il cammino superficiale si avvolge
 # -------------------------------------------------------------------------
