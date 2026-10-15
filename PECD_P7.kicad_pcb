@@ -103899,5 +103899,28 @@
 			)
 		)
 	)
+	(gr_rect
+		(start 207 163)
+		(end 476 357.5)
+		(stroke
+			(width 0.3)
+			(type dash)
+		)
+		(fill no)
+		(layer "User.1")
+		(uuid "3471a9eb-620a-4fe5-96f5-7dbca3e69883")
+	)
+	(gr_text "POWER STAGE MODULE  (sheets 1_power_stage and leg: 30 parts)"
+		(at 209 161.5 0)
+		(layer "User.1")
+		(uuid "9926fc39-9a8c-4598-a6e4-44a72158166a")
+		(effects
+			(font
+				(size 2.5 2.5)
+				(thickness 0.4)
+			)
+			(justify left bottom)
+		)
+	)
 	(embedded_fonts no)
 )
