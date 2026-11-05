@@ -1,0 +1,15 @@
+# Copie di sicurezza e file locali di KiCad
+*.prima_*
+*.modifiche_utente_*
+*-backups/
+fp-info-cache
+_autosave-*
+~*.lck
+
+# Cronologia locale di KiCad (e' un repository annidato)
+.history/
+
+# Uscite di fabbricazione e verifiche, non fanno parte del progetto
+fab/
+verifiche/
+design-block-lib-table
